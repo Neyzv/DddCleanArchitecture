@@ -8,7 +8,7 @@ namespace DddCleanArchitecture.Infrastructure.Database;
 public sealed class MyDbContext
     : DbContext
 {
-    private ImmutableArray<ISeeder> _seeders;
+    private readonly ImmutableArray<ISeeder> _seeders;
 
     public MyDbContext(DbContextOptions<MyDbContext> options, IEnumerable<ISeeder> seeders)
         : base(options)
