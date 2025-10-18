@@ -18,7 +18,7 @@ public partial class App : Application
     {
         var services = new ServiceCollection()
             .AddMyDbContext()
-            .AddServices()
+            .AddServicesAndConfiguration()
             .BuildServiceProvider();
 
         var context = services.GetRequiredService<IDbContextFactory<MyDbContext>>().CreateDbContext();
