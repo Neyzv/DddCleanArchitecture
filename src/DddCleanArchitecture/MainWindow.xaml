@@ -3,10 +3,20 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:DddCleanArchitecture"
+        xmlns:vm="clr-namespace:DddCleanArchitecture.ViewModels"
+        xmlns:markup="clr-namespace:DddCleanArchitecture.MarkupExtensions"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
+    <!-- For autocompletion only -->
+    <d:Window.DataContext>
+        <vm:MainWindowViewModel />
+    </d:Window.DataContext>
 
+    <Window.DataContext>
+        <markup:ResolvedViewModel ViewModel="{x:Type vm:MainWindowViewModel}" />
+    </Window.DataContext>
+
+    <Grid>
+        <TextBlock Foreground="Black" Text="{Binding Greetings}" />
     </Grid>
 </Window>

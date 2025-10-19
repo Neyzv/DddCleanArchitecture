@@ -9,29 +9,29 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\..\lib\DddCleanArchitecture.Application\DddCleanArchitecture.Application.csproj" />
+        <ProjectReference Include="..\..\lib\DddCleanArchitecture.Application\DddCleanArchitecture.Application.csproj"/>
     </ItemGroup>
 
     <ItemGroup>
-      <PackageReference Include="CommunityToolkit.Mvvm" Version="8.4.0" />
-      <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="9.0.10">
-        <PrivateAssets>all</PrivateAssets>
-        <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
-      </PackageReference>
-      <PackageReference Include="Microsoft.Extensions.Configuration" Version="9.0.10" />
-      <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="9.0.10" />
-      <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="9.0.10" />
-      <PackageReference Include="Microsoft.Extensions.Options" Version="9.0.10" />
-      <PackageReference Include="Microsoft.Extensions.Options.ConfigurationExtensions" Version="9.0.10" />
+        <PackageReference Include="CommunityToolkit.Mvvm" Version="8.4.0"/>
+        <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="9.0.10">
+            <PrivateAssets>all</PrivateAssets>
+            <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+        </PackageReference>
+        <PackageReference Include="Microsoft.Extensions.Configuration" Version="9.0.10"/>
+        <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="9.0.10"/>
+        <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="9.0.10"/>
+        <PackageReference Include="Microsoft.Extensions.Options" Version="9.0.10"/>
+        <PackageReference Include="Microsoft.Extensions.Options.ConfigurationExtensions" Version="9.0.10"/>
     </ItemGroup>
 
     <ItemGroup>
-      <None Remove="appsettings.json" />
-      <Content Include="appsettings.json">
-        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      </Content>
-        
-        <None Remove="appsettings.Debug.json" />
+        <None Remove="appsettings.json"/>
+        <Content Include="appsettings.json">
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </Content>
+
+        <None Remove="appsettings.Debug.json"/>
         <Content Include="appsettings.Debug.json" Condition="'$(Configuration)' == 'Debug'">
             <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
         </Content>

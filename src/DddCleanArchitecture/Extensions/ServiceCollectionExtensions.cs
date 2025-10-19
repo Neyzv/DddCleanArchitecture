@@ -22,10 +22,7 @@ public static class ServiceCollectionExtensions
                 o.UseSqlite(string.Format(dbConfig.ConnectionString, dbConfig.DatabaseName));
             })
             .AddSingleton<MainWindowViewModel>()
-            .AddSingleton<MainWindow>(x => new MainWindow
-            {
-                DataContext = x.GetRequiredService<MainWindowViewModel>()
-            });
+            .AddSingleton<MainWindow>();
 
     private static IServiceCollection AddConfiguration(this IServiceCollection services)
     {
