@@ -10,7 +10,7 @@ internal static class SpecificationEvaluator
         where TDbEntity : class, IDbEntity
     {
         var query = baseQuery;
-        
+
         var orderBySpecifications = new List<ISpecification<TDbEntity>>();
 
         foreach (var specification in specifications)
@@ -20,18 +20,15 @@ internal static class SpecificationEvaluator
                 case ICriteriaSpecification<TDbEntity> criteriaSpecification:
                     query = query.Where(criteriaSpecification.Criteria);
                     break;
-                
+
                 case IOrderedSpecification<TDbEntity> or IOrderedDescSpecification<TDbEntity>:
                     orderBySpecifications.Add(specification);
                     break;
-                
-                case IIncludesSpecification<TDbEntity> includesSpecification:
-                    query = includesSpecification.Includes.Aggregate(
-                        query,
-                        (current, includeSpecification) => current.Include(includeSpecification)
-                    );
+
+                case IIncludeSpecification<TDbEntity> includeSpecification:
+                    query = query.Include(includeSpecification.Include);
                     break;
-                
+
                 default:
                     continue;
             }
@@ -39,7 +36,7 @@ internal static class SpecificationEvaluator
 
         if (orderBySpecifications.Count is 0)
             return query;
-        
+
         var orderedQuery = orderBySpecifications[0] switch
         {
             IOrderedSpecification<TDbEntity> orderedSpecification => query.OrderBy(orderedSpecification.OrderBy),
