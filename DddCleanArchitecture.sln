@@ -12,6 +12,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DddCleanArchitecture.Infras
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DddCleanArchitecture.Domain", "lib\DddCleanArchitecture.Domain\DddCleanArchitecture.Domain.csproj", "{5AEE3F49-DC0A-4A51-AB4E-0C4303527634}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DddCleanArchitecture.SourceGenerators", "lib\DddCleanArchitecture.SourceGenerators\DddCleanArchitecture.SourceGenerators\DddCleanArchitecture.SourceGenerators.csproj", "{F003F4A5-9530-431F-A525-5792EB8B9DBA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -34,11 +36,16 @@ Global
 		{5AEE3F49-DC0A-4A51-AB4E-0C4303527634}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5AEE3F49-DC0A-4A51-AB4E-0C4303527634}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5AEE3F49-DC0A-4A51-AB4E-0C4303527634}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F003F4A5-9530-431F-A525-5792EB8B9DBA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F003F4A5-9530-431F-A525-5792EB8B9DBA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F003F4A5-9530-431F-A525-5792EB8B9DBA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F003F4A5-9530-431F-A525-5792EB8B9DBA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{2E78D2F0-A21B-435E-9B01-5DB73D876CCF} = {A88E34BB-6EEC-438D-8C1B-BECCABDEB741}
 		{750E369F-570D-443F-81EB-AFF9CA2BE489} = {2A4E012B-B581-49DD-BD30-2447930F6FAC}
 		{FB13D188-C088-44CB-84A3-4BB3AA9ACFB1} = {2A4E012B-B581-49DD-BD30-2447930F6FAC}
 		{5AEE3F49-DC0A-4A51-AB4E-0C4303527634} = {2A4E012B-B581-49DD-BD30-2447930F6FAC}
+		{F003F4A5-9530-431F-A525-5792EB8B9DBA} = {2A4E012B-B581-49DD-BD30-2447930F6FAC}
 	EndGlobalSection
 EndGlobal
