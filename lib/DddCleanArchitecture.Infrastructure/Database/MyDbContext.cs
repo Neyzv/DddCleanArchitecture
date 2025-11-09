@@ -5,17 +5,10 @@ using Microsoft.EntityFrameworkCore;
 
 namespace DddCleanArchitecture.Infrastructure.Database;
 
-public sealed class MyDbContext
-    : DbContext
+public sealed class MyDbContext(DbContextOptions<MyDbContext> options, IEnumerable<ISeeder> seeders) : DbContext(options)
 {
-    private readonly ImmutableArray<ISeeder> _seeders;
+    private readonly ImmutableArray<ISeeder> _seeders = [..seeders];
 
-    public MyDbContext(DbContextOptions<MyDbContext> options, IEnumerable<ISeeder> seeders)
-        : base(options)
-    {
-        _seeders = [..seeders];
-    }
-    
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         modelBuilder.ApplyConfigurationsFromAssembly(typeof(MyDbContext).Assembly);
@@ -29,7 +22,7 @@ public sealed class MyDbContext
             {
                 DataSource = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "MyDb.db")
             }.ToString();
-            
+
             optionsBuilder.UseSqlite(connectionString);
         }
 
@@ -47,15 +40,15 @@ public sealed class MyDbContext
     private async Task SeedAsync(DbContext context, bool migrationApplied, CancellationToken token)
     {
         var tasks = new List<Task>();
-        
+
         foreach (var seeder in _seeders)
         {
             if (!await seeder.ShouldBeAppliedAsync(context, token).ConfigureAwait(false))
                 continue;
-            
+
             tasks.Add(seeder.SeedAsync(context, token));
         }
-        
+
         await Task.WhenAll(tasks).ConfigureAwait(false);
     }
 }

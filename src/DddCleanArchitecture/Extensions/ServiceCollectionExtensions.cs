@@ -1,5 +1,6 @@
 ﻿using DddCleanArchitecture.Infrastructure.Extensions;
 using DddCleanArchitecture.Models.Configuration;
+using DddCleanArchitecture.Services.Navigation;
 using DddCleanArchitecture.ViewModels;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
@@ -21,6 +22,8 @@ public static class ServiceCollectionExtensions
 
                 o.UseSqlite(string.Format(dbConfig.ConnectionString, dbConfig.DatabaseName));
             })
+            .AddTransient<NavigationRepository>()
+            .AddTransient<INavigationService, NavigationService>()
             .AddSingleton<MainWindowViewModel>()
             .AddSingleton<MainWindow>();
 

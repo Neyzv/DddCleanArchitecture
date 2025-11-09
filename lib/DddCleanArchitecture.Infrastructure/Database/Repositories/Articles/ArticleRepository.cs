@@ -7,23 +7,14 @@ using Microsoft.Extensions.DependencyInjection;
 
 namespace DddCleanArchitecture.Infrastructure.Database.Repositories.Articles;
 
-public sealed class ArticleRepository
-    : EntityRepository<Article>
+public sealed class ArticleRepository(IDbContextFactory<MyDbContext> dbContextFactory, IServiceProvider serviceProvider) : EntityRepository<Article>(dbContextFactory)
 {
-    private readonly IServiceProvider _serviceProvider;
-
-    public ArticleRepository(IDbContextFactory<MyDbContext> dbContextFactory, IServiceProvider serviceProvider)
-        : base(dbContextFactory)
-    {
-        _serviceProvider = serviceProvider;
-    }
-
     public Task<List<Article>> GetAllArticlesOrderedDescByDate() =>
-        GetAllAsync(_serviceProvider.GetRequiredService<ByDateOrderedDescSpecification>());
+        GetAllAsync(serviceProvider.GetRequiredService<ByDateOrderedDescSpecification>());
 
     public Task<Article?> GetArticleByIdWithComments(int id) =>
         GetAsync(
             new GetByIdCriteriaSpecification(id),
-            _serviceProvider.GetRequiredService<CommentsIncludeSpecification>()
+            serviceProvider.GetRequiredService<CommentsIncludeSpecification>()
         );
 }
