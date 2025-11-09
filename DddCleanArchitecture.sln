@@ -14,6 +14,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DddCleanArchitecture.Domain
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DddCleanArchitecture.SourceGenerators", "lib\DddCleanArchitecture.SourceGenerators\DddCleanArchitecture.SourceGenerators.csproj", "{57C0E2BC-11F5-4632-BA63-145285B7AC92}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DddCleanArchitecture.Internationalisation", "lib\DddCleanArchitecture.Internationalisation\DddCleanArchitecture.Internationalisation.csproj", "{53BBDF5D-EF83-4D0C-9CED-D7A945CDD742}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -40,6 +42,10 @@ Global
 		{57C0E2BC-11F5-4632-BA63-145285B7AC92}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{57C0E2BC-11F5-4632-BA63-145285B7AC92}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{57C0E2BC-11F5-4632-BA63-145285B7AC92}.Release|Any CPU.Build.0 = Release|Any CPU
+		{53BBDF5D-EF83-4D0C-9CED-D7A945CDD742}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{53BBDF5D-EF83-4D0C-9CED-D7A945CDD742}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{53BBDF5D-EF83-4D0C-9CED-D7A945CDD742}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{53BBDF5D-EF83-4D0C-9CED-D7A945CDD742}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{2E78D2F0-A21B-435E-9B01-5DB73D876CCF} = {A88E34BB-6EEC-438D-8C1B-BECCABDEB741}
@@ -47,5 +53,6 @@ Global
 		{FB13D188-C088-44CB-84A3-4BB3AA9ACFB1} = {2A4E012B-B581-49DD-BD30-2447930F6FAC}
 		{5AEE3F49-DC0A-4A51-AB4E-0C4303527634} = {2A4E012B-B581-49DD-BD30-2447930F6FAC}
 		{57C0E2BC-11F5-4632-BA63-145285B7AC92} = {2A4E012B-B581-49DD-BD30-2447930F6FAC}
+		{53BBDF5D-EF83-4D0C-9CED-D7A945CDD742} = {2A4E012B-B581-49DD-BD30-2447930F6FAC}
 	EndGlobalSection
 EndGlobal

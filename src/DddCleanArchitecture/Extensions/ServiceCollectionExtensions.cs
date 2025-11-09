@@ -1,4 +1,5 @@
-﻿using DddCleanArchitecture.Infrastructure.Extensions;
+﻿using DddCleanArchitecture.Application.Extensions;
+using DddCleanArchitecture.Infrastructure.Extensions;
 using DddCleanArchitecture.Models.Configuration;
 using DddCleanArchitecture.Services.Navigation;
 using DddCleanArchitecture.ViewModels;
@@ -22,6 +23,7 @@ public static class ServiceCollectionExtensions
 
                 o.UseSqlite(string.Format(dbConfig.ConnectionString, dbConfig.DatabaseName));
             })
+            .AddApplicationLayer()
             .AddTransient<NavigationRepository>()
             .AddTransient<INavigationService, NavigationService>()
             .AddSingleton<MainWindowViewModel>()

@@ -9,25 +9,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4e03f68c-d391-4fe8-9ac3-1f70f6d17eb2" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/lib/DddCleanArchitecture.Domain/Attributes/NavigableForAttribute.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/DddCleanArchitecture/Services/Navigation/INavigationService.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/DddCleanArchitecture/Services/Navigation/NavigationService.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/DddCleanArchitecture/ViewModels/HomeViewModel.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/DddCleanArchitecture/ViewModels/Navigation/NavigableViewModel.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/DddCleanArchitecture/Views/HomeView.xaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/DddCleanArchitecture/Views/HomeView.xaml.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.DddCleanArchitecture/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.DddCleanArchitecture/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.DddCleanArchitecture/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/DddCleanArchitecture.Application/Extensions/ServiceCollectionExtensions.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/DddCleanArchitecture.Application/Services/Internationalisation/InternationalisationService.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/DddCleanArchitecture.Domain/Enums/Language.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/DddCleanArchitecture.Domain/Services/Internationalisation/IInternationalisationService.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/DddCleanArchitecture.Internationalisation/Resources/Errors.Designer.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/DddCleanArchitecture.Internationalisation/Resources/Errors.fr-FR.Designer.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/DddCleanArchitecture.Internationalisation/Resources/Errors.fr-FR.resx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/DddCleanArchitecture.Internationalisation/Resources/Errors.resx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/DddCleanArchitecture.Internationalisation/Resources/Labels.Designer.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/DddCleanArchitecture.Internationalisation/Resources/Labels.fr-FR.Designer.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/DddCleanArchitecture.Internationalisation/Resources/Labels.fr-FR.resx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/DddCleanArchitecture.Internationalisation/Resources/Labels.resx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.DddCleanArchitecture/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.DddCleanArchitecture/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.DddCleanArchitecture/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DddCleanArchitecture.sln" beforeDir="false" afterPath="$PROJECT_DIR$/DddCleanArchitecture.sln" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DddCleanArchitecture.sln.DotSettings.user" beforeDir="false" afterPath="$PROJECT_DIR$/DddCleanArchitecture.sln.DotSettings.user" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/DddCleanArchitecture.Infrastructure/Database/MyDbContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/lib/DddCleanArchitecture.Infrastructure/Database/MyDbContext.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/DddCleanArchitecture.Infrastructure/Database/Repositories/Articles/ArticleRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/lib/DddCleanArchitecture.Infrastructure/Database/Repositories/Articles/ArticleRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/DddCleanArchitecture.Infrastructure/Database/Repositories/Articles/Specifications/Criteria/GetByIdCriteriaSpecification.cs" beforeDir="false" afterPath="$PROJECT_DIR$/lib/DddCleanArchitecture.Infrastructure/Database/Repositories/Articles/Specifications/Criteria/GetByIdCriteriaSpecification.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/DddCleanArchitecture.Infrastructure/Database/Repositories/EntityRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/lib/DddCleanArchitecture.Infrastructure/Database/Repositories/EntityRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/DddCleanArchitecture.SourceGenerators/DddCleanArchitecture.SourceGenerators/DddCleanArchitecture.SourceGenerators.csproj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/DddCleanArchitecture.SourceGenerators/DddCleanArchitecture.SourceGenerators/Extensions/IncrementalValueProviderExtensions.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/DddCleanArchitecture.SourceGenerators/DddCleanArchitecture.SourceGenerators/Infrastructure/SourceCodeWriter.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/DddCleanArchitecture.SourceGenerators/DddCleanArchitecture.SourceGenerators/Properties/launchSettings.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DddCleanArchitecture/App.xaml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/DddCleanArchitecture/App.xaml.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/DddCleanArchitecture/DddCleanArchitecture.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/src/DddCleanArchitecture/DddCleanArchitecture.csproj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/DddCleanArchitecture/Extensions/ServiceCollectionExtensions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/DddCleanArchitecture/Extensions/ServiceCollectionExtensions.cs" afterDir="false" />
     </list>
@@ -35,6 +33,9 @@
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DpaMonitoringSettings">
+    <option name="firstShow" value="false" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -45,6 +46,9 @@
     "assignee": "Neyzv"
   }
 }]]></component>
+  <component name="GithubDefaultAccount">
+    <option name="defaultAccountId" value="6ae89936-63a3-4274-83f1-0f733eca8d7a" />
+  </component>
   <component name="GithubPullRequestsUISettings"><![CDATA[{
   "selectedUrlAndAccountId": {
     "url": "https://github.com/Neyzv/DddCleanArchitecture.git",
@@ -53,7 +57,9 @@
 }]]></component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$USER_HOME$/AppData/Local/Temp/SourceGeneratedDocuments/657252444F15D985D0B0BDE2/DddCleanArchitecture.SourceGenerators/DddCleanArchitecture.SourceGenerators.NavigationRepository.NavigationRepositorySourceGenerator/NavigationRepository.g.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/vince/Desktop/WIP/DddCleanArchitecture/src/DddCleanArchitecture/Services/Navigation/INavigationService.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
+  <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProjectColorInfo"><![CDATA[{
   "customColor": "",
   "associatedIndex": 3
@@ -65,6 +71,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    ".NET Project.DddCleanArchitecture.executor": "Run",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
@@ -129,16 +136,37 @@
       <updated>1745092154186</updated>
       <workItem from="1745092155348" duration="244000" />
       <workItem from="1745092466168" duration="211000" />
-      <workItem from="1762675966043" duration="1066000" />
+      <workItem from="1762675966043" duration="4386000" />
     </task>
+    <task id="LOCAL-00001" summary="feat(navigation)!: navigation service and repo">
+      <option name="closed" value="true" />
+      <created>1762677122145</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1762677122145</updated>
+    </task>
+    <task id="LOCAL-00002" summary="doc(navigation): providing some doc">
+      <option name="closed" value="true" />
+      <created>1762677309550</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1762677309550</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="UnityCheckinConfiguration" checkUnsavedScenes="true" />
   <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+    <MESSAGE value="feat(navigation)!: navigation service and repo" />
+    <MESSAGE value="doc(navigation): providing some doc" />
+    <option name="LAST_COMMIT_MESSAGE" value="doc(navigation): providing some doc" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

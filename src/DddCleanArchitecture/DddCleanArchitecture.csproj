@@ -10,6 +10,7 @@
 
     <ItemGroup>
         <ProjectReference Include="..\..\lib\DddCleanArchitecture.Application\DddCleanArchitecture.Application.csproj"/>
+        <ProjectReference Include="..\..\lib\DddCleanArchitecture.Internationalisation\DddCleanArchitecture.Internationalisation.csproj" />
         <ProjectReference Include="..\..\lib\DddCleanArchitecture.SourceGenerators\DddCleanArchitecture.SourceGenerators.csproj"
                           OutputItemType="Analyzer"
                           ReferenceOutputAssembly="false"/>

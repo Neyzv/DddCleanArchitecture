@@ -9,7 +9,7 @@ namespace DddCleanArchitecture;
 /// <summary>
 /// Interaction logic for App.xaml
 /// </summary>
-public partial class App : Application
+public partial class App
 {
     public static IServiceProvider ServiceProvider { get; private set; } = null!;
 
