@@ -16,7 +16,7 @@ public sealed class NavigationService
     {
         _navigationRepository = navigationRepository;
     }
-
+    
     public void NavigateTo<TView>()
         where TView : Control
     {
