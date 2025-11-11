@@ -2,11 +2,9 @@
 
 public abstract class NavigableViewModel
 {
-    public virtual void OnNavigatedFrom()
-    {
-    }
+    public virtual Task OnNavigatedFromAsync() =>
+        Task.CompletedTask;
 
-    public virtual void OnNavigateTo()
-    {
-    }
+    public virtual Task OnNavigateToAsync() =>
+        Task.CompletedTask;
 }

@@ -9,12 +9,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4e03f68c-d391-4fe8-9ac3-1f70f6d17eb2" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/DddCleanArchitecture/Assets/Resources/Shadows.xaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/DddCleanArchitecture.Domain/Models/Articles/ArticleDto.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/DddCleanArchitecture.Domain/Models/Articles/CommentDto.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/DddCleanArchitecture.Domain/Repositories/Articles/IArticleRepository.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.DddCleanArchitecture/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.DddCleanArchitecture/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DddCleanArchitecture/Assets/Resources/Global.xaml" beforeDir="false" afterPath="$PROJECT_DIR$/src/DddCleanArchitecture/Assets/Resources/Global.xaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DddCleanArchitecture/Assets/Styles/Buttons.xaml" beforeDir="false" afterPath="$PROJECT_DIR$/src/DddCleanArchitecture/Assets/Styles/Buttons.xaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DddCleanArchitecture/MainWindow.xaml" beforeDir="false" afterPath="$PROJECT_DIR$/src/DddCleanArchitecture/MainWindow.xaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/DddCleanArchitecture.Infrastructure/Database/Models/Article.cs" beforeDir="false" afterPath="$PROJECT_DIR$/lib/DddCleanArchitecture.Infrastructure/Database/Models/Article.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/DddCleanArchitecture.Infrastructure/Database/Models/Comment.cs" beforeDir="false" afterPath="$PROJECT_DIR$/lib/DddCleanArchitecture.Infrastructure/Database/Models/Comment.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/DddCleanArchitecture.Infrastructure/Database/Repositories/Articles/ArticleRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/lib/DddCleanArchitecture.Infrastructure/Database/Repositories/Articles/ArticleRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/DddCleanArchitecture.Infrastructure/Extensions/ServiceCollectionExtensions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/lib/DddCleanArchitecture.Infrastructure/Extensions/ServiceCollectionExtensions.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DddCleanArchitecture/Services/Navigation/INavigationService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/DddCleanArchitecture/Services/Navigation/INavigationService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DddCleanArchitecture/Services/Navigation/NavigationService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/DddCleanArchitecture/Services/Navigation/NavigationService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DddCleanArchitecture/ViewModels/HomeViewModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/DddCleanArchitecture/ViewModels/HomeViewModel.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/DddCleanArchitecture/ViewModels/MainWindowViewModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/DddCleanArchitecture/ViewModels/MainWindowViewModel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DddCleanArchitecture/ViewModels/Navigation/NavigableViewModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/DddCleanArchitecture/ViewModels/Navigation/NavigableViewModel.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,7 +66,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    ".NET Project.DddCleanArchitecture.executor": "Run",
+    ".NET Project.DddCleanArchitecture.executor": "Debug",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
@@ -126,7 +133,7 @@
       <workItem from="1745092466168" duration="211000" />
       <workItem from="1762675966043" duration="6805000" />
       <workItem from="1762764798975" duration="1460000" />
-      <workItem from="1762865965381" duration="4135000" />
+      <workItem from="1762865965381" duration="12930000" />
     </task>
     <task id="LOCAL-00001" summary="feat(navigation)!: navigation service and repo">
       <option name="closed" value="true" />
@@ -160,7 +167,15 @@
       <option name="project" value="LOCAL" />
       <updated>1762867727596</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="feat(navigation): main view navigation">
+      <option name="closed" value="true" />
+      <created>1762870861001</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1762870861001</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -174,7 +189,8 @@
     <MESSAGE value="doc(navigation): providing some doc" />
     <MESSAGE value="feat(i18n): internationalisation system" />
     <MESSAGE value="feat(resources): adding resources and base text sizes" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat(resources): adding resources and base text sizes" />
+    <MESSAGE value="feat(navigation): main view navigation" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat(navigation): main view navigation" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -191,6 +207,19 @@
           <properties exception="System.Threading.ThreadAbortException" breakIfHandledByOtherCode="false" displayValue="System.Threading.ThreadAbortException" />
           <option name="timeStamp" value="3" />
         </breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/src/DddCleanArchitecture/ViewModels/HomeViewModel.cs</url>
+          <line>28</line>
+          <properties documentPath="C:\Users\vince\Desktop\WIP\DddCleanArchitecture\src\DddCleanArchitecture\ViewModels\HomeViewModel.cs" containingFunctionPresentation="Method 'OnNavigateToAsync'">
+            <startOffsets>
+              <option value="884" />
+            </startOffsets>
+            <endOffsets>
+              <option value="885" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>

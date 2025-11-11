@@ -24,7 +24,7 @@ public sealed partial class MainWindowViewModel
         _navigationService = navigationService;
 
         _navigationService.ViewChanged += OnCurrentViewChanged;
-        _navigationService.NavigateTo<HomeView>();
+        _ = _navigationService.NavigateToAsync<HomeView>();
     }
 
     private void OnCurrentViewChanged(Control newView)

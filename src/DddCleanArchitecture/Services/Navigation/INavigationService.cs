@@ -18,5 +18,6 @@ public interface INavigationService
     /// Navigate to the specified view while triggering the view model navigation functions.
     /// </summary>
     /// <typeparam name="TView">The type of the desired view</typeparam>
-    public void NavigateTo<TView>() where TView : Control;
+    Task NavigateToAsync<TView>()
+        where TView : Control;
 }

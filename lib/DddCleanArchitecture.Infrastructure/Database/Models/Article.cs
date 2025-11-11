@@ -1,15 +1,11 @@
-﻿namespace DddCleanArchitecture.Infrastructure.Database.Models;
+﻿using DddCleanArchitecture.Domain.Models.Articles;
+
+namespace DddCleanArchitecture.Infrastructure.Database.Models;
 
 public sealed class Article
-    : IDbEntity
+    : ArticleDto, IDbEntity
 {
     public int Id { get; set; }
-    
-    public required string Title { get; set; }
-    
-    public required string Content { get; set; }
-    
-    public DateTime PublishDate { get; set; }
 
-    public ICollection<Comment> Comments { get; set; } = [];
+    public new ICollection<Comment> Comments { get; set; } = [];
 }

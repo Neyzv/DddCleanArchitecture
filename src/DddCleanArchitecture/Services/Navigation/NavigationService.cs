@@ -16,8 +16,8 @@ public sealed class NavigationService
     {
         _navigationRepository = navigationRepository;
     }
-    
-    public void NavigateTo<TView>()
+
+    public async Task NavigateToAsync<TView>()
         where TView : Control
     {
         if (_navigationRepository.TryGetView<TView>() is not { } view)
@@ -26,12 +26,13 @@ public sealed class NavigationService
         if (view.DataContext is not NavigableViewModel viewModel)
             throw new InvalidOperationException($"View '{typeof(TView)}' data context should be of type '{typeof(NavigableViewModel)}'.");
 
-        _currentViewModel?.OnNavigatedFrom();
+        if (_currentViewModel is not null)
+            await _currentViewModel.OnNavigatedFromAsync().ConfigureAwait(false);
 
         _currentViewModel = viewModel;
 
         ViewChanged?.Invoke(view);
 
-        viewModel.OnNavigateTo();
+        await viewModel.OnNavigateToAsync().ConfigureAwait(false);
     }
 }
