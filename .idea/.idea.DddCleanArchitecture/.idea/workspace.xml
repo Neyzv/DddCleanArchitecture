@@ -9,25 +9,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4e03f68c-d391-4fe8-9ac3-1f70f6d17eb2" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/lib/DddCleanArchitecture.Application/Extensions/ServiceCollectionExtensions.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/DddCleanArchitecture.Application/Services/Internationalisation/InternationalisationService.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/DddCleanArchitecture.Domain/Enums/Language.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/DddCleanArchitecture.Domain/Services/Internationalisation/IInternationalisationService.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/DddCleanArchitecture.Internationalisation/Resources/Errors.Designer.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/DddCleanArchitecture.Internationalisation/Resources/Errors.fr-FR.Designer.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/DddCleanArchitecture.Internationalisation/Resources/Errors.fr-FR.resx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/DddCleanArchitecture.Internationalisation/Resources/Errors.resx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/DddCleanArchitecture.Internationalisation/Resources/Labels.Designer.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/DddCleanArchitecture.Internationalisation/Resources/Labels.fr-FR.Designer.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/DddCleanArchitecture.Internationalisation/Resources/Labels.fr-FR.resx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/DddCleanArchitecture.Internationalisation/Resources/Labels.resx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.DddCleanArchitecture/.idea/misc.xml" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/DddCleanArchitecture/Assets/Resources/FontSize.xaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/DddCleanArchitecture/Assets/Resources/Global.xaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/DddCleanArchitecture/Assets/Styles/Buttons.xaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/DddCleanArchitecture/Assets/Styles/Global.xaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.DddCleanArchitecture/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.DddCleanArchitecture/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DddCleanArchitecture.sln" beforeDir="false" afterPath="$PROJECT_DIR$/DddCleanArchitecture.sln" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DddCleanArchitecture.sln.DotSettings.user" beforeDir="false" afterPath="$PROJECT_DIR$/DddCleanArchitecture.sln.DotSettings.user" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DddCleanArchitecture/App.xaml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/DddCleanArchitecture/App.xaml.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DddCleanArchitecture/DddCleanArchitecture.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/src/DddCleanArchitecture/DddCleanArchitecture.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DddCleanArchitecture/Extensions/ServiceCollectionExtensions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/DddCleanArchitecture/Extensions/ServiceCollectionExtensions.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DddCleanArchitecture/App.xaml" beforeDir="false" afterPath="$PROJECT_DIR$/src/DddCleanArchitecture/App.xaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DddCleanArchitecture/MainWindow.xaml" beforeDir="false" afterPath="$PROJECT_DIR$/src/DddCleanArchitecture/MainWindow.xaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DddCleanArchitecture/ViewModels/MainWindowViewModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/DddCleanArchitecture/ViewModels/MainWindowViewModel.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,53 +30,54 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "Neyzv"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;Neyzv&quot;
   }
-}]]></component>
+}</component>
   <component name="GithubDefaultAccount">
     <option name="defaultAccountId" value="6ae89936-63a3-4274-83f1-0f733eca8d7a" />
   </component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/Neyzv/DddCleanArchitecture.git",
-    "accountId": "6ae89936-63a3-4274-83f1-0f733eca8d7a"
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/Neyzv/DddCleanArchitecture.git&quot;,
+    &quot;accountId&quot;: &quot;6ae89936-63a3-4274-83f1-0f733eca8d7a&quot;
   }
-}]]></component>
+}</component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$USER_HOME$/AppData/Local/Temp/SourceGeneratedDocuments/657252444F15D985D0B0BDE2/DddCleanArchitecture.SourceGenerators/DddCleanArchitecture.SourceGenerators.NavigationRepository.NavigationRepositorySourceGenerator/NavigationRepository.g.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/vince/Desktop/WIP/DddCleanArchitecture/src/DddCleanArchitecture/App.xaml.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://C:/Users/vince/Desktop/WIP/DddCleanArchitecture/src/DddCleanArchitecture/Services/Navigation/INavigationService.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
-  <component name="ProjectColorInfo"><![CDATA[{
-  "customColor": "",
-  "associatedIndex": 3
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 3
+}</component>
   <component name="ProjectId" id="35EWy5QQREFz4mYmqsDtl2vePzN" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    ".NET Project.DddCleanArchitecture.executor": "Run",
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "main",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "rider.code.cleanup.on.save": "true",
-    "rider.code.cleanup.on.save.profile": "Remove usings",
-    "settings.editor.selected.configurable": "actions.on.save",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;.NET Project.DddCleanArchitecture.executor&quot;: &quot;Run&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;rider.code.cleanup.on.save&quot;: &quot;true&quot;,
+    &quot;rider.code.cleanup.on.save.profile&quot;: &quot;Remove usings&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;actions.on.save&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected=".NET Project.DddCleanArchitecture">
     <configuration name="DddCleanArchitecture" type="DotNetProject" factoryName=".NET Project">
       <option name="EXE_PATH" value="" />
@@ -136,7 +127,9 @@
       <updated>1745092154186</updated>
       <workItem from="1745092155348" duration="244000" />
       <workItem from="1745092466168" duration="211000" />
-      <workItem from="1762675966043" duration="4386000" />
+      <workItem from="1762675966043" duration="6805000" />
+      <workItem from="1762764798975" duration="1460000" />
+      <workItem from="1762865965381" duration="1439000" />
     </task>
     <task id="LOCAL-00001" summary="feat(navigation)!: navigation service and repo">
       <option name="closed" value="true" />
@@ -154,7 +147,15 @@
       <option name="project" value="LOCAL" />
       <updated>1762677309550</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="feat(i18n): internationalisation system">
+      <option name="closed" value="true" />
+      <created>1762680967156</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1762680967156</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -166,7 +167,8 @@
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
     <MESSAGE value="feat(navigation)!: navigation service and repo" />
     <MESSAGE value="doc(navigation): providing some doc" />
-    <option name="LAST_COMMIT_MESSAGE" value="doc(navigation): providing some doc" />
+    <MESSAGE value="feat(i18n): internationalisation system" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat(i18n): internationalisation system" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
