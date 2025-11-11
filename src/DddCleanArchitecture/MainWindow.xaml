@@ -24,10 +24,15 @@
             <RowDefinition Height="Auto" />
         </Grid.RowDefinitions>
 
-        <Grid Grid.Row="0">
-            <StackPanel Background="White" HorizontalAlignment="Center" Orientation="Horizontal">
+        <Grid Grid.Row="0"
+              Background="White"
+              HorizontalAlignment="Stretch"
+              Effect="{StaticResource ContainerShadowXs}">
+            <StackPanel HorizontalAlignment="Center" Orientation="Horizontal">
                 <Button Content="{Binding HomeLabel, Mode=OneWay}" />
             </StackPanel>
         </Grid>
+        
+        <ContentControl Grid.Row="1" Content="{Binding Current, Mode=OneWay}"/>
     </Grid>
 </Window>

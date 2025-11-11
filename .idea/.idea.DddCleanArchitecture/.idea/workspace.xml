@@ -9,13 +9,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4e03f68c-d391-4fe8-9ac3-1f70f6d17eb2" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/DddCleanArchitecture/Assets/Resources/FontSize.xaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/DddCleanArchitecture/Assets/Resources/Global.xaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/DddCleanArchitecture/Assets/Styles/Buttons.xaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/DddCleanArchitecture/Assets/Styles/Global.xaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/DddCleanArchitecture/Assets/Resources/Shadows.xaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.DddCleanArchitecture/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.DddCleanArchitecture/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DddCleanArchitecture.sln.DotSettings.user" beforeDir="false" afterPath="$PROJECT_DIR$/DddCleanArchitecture.sln.DotSettings.user" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DddCleanArchitecture/App.xaml" beforeDir="false" afterPath="$PROJECT_DIR$/src/DddCleanArchitecture/App.xaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DddCleanArchitecture/Assets/Resources/Global.xaml" beforeDir="false" afterPath="$PROJECT_DIR$/src/DddCleanArchitecture/Assets/Resources/Global.xaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DddCleanArchitecture/Assets/Styles/Buttons.xaml" beforeDir="false" afterPath="$PROJECT_DIR$/src/DddCleanArchitecture/Assets/Styles/Buttons.xaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/DddCleanArchitecture/MainWindow.xaml" beforeDir="false" afterPath="$PROJECT_DIR$/src/DddCleanArchitecture/MainWindow.xaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/DddCleanArchitecture/ViewModels/MainWindowViewModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/DddCleanArchitecture/ViewModels/MainWindowViewModel.cs" afterDir="false" />
     </list>
@@ -60,24 +57,24 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;.NET Project.DddCleanArchitecture.executor&quot;: &quot;Run&quot;,
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;rider.code.cleanup.on.save&quot;: &quot;true&quot;,
-    &quot;rider.code.cleanup.on.save.profile&quot;: &quot;Remove usings&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;actions.on.save&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    ".NET Project.DddCleanArchitecture.executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "main",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "rider.code.cleanup.on.save": "true",
+    "rider.code.cleanup.on.save.profile": "Remove usings",
+    "settings.editor.selected.configurable": "HotReloadSettingsPage",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RunManager" selected=".NET Project.DddCleanArchitecture">
     <configuration name="DddCleanArchitecture" type="DotNetProject" factoryName=".NET Project">
       <option name="EXE_PATH" value="" />
@@ -129,7 +126,7 @@
       <workItem from="1745092466168" duration="211000" />
       <workItem from="1762675966043" duration="6805000" />
       <workItem from="1762764798975" duration="1460000" />
-      <workItem from="1762865965381" duration="1439000" />
+      <workItem from="1762865965381" duration="4135000" />
     </task>
     <task id="LOCAL-00001" summary="feat(navigation)!: navigation service and repo">
       <option name="closed" value="true" />
@@ -155,7 +152,15 @@
       <option name="project" value="LOCAL" />
       <updated>1762680967156</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="feat(resources): adding resources and base text sizes">
+      <option name="closed" value="true" />
+      <created>1762867727596</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1762867727596</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -168,7 +173,8 @@
     <MESSAGE value="feat(navigation)!: navigation service and repo" />
     <MESSAGE value="doc(navigation): providing some doc" />
     <MESSAGE value="feat(i18n): internationalisation system" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat(i18n): internationalisation system" />
+    <MESSAGE value="feat(resources): adding resources and base text sizes" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat(resources): adding resources and base text sizes" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
