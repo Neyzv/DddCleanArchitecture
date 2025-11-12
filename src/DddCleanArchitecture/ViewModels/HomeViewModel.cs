@@ -8,12 +8,17 @@ using DddCleanArchitecture.Views;
 namespace DddCleanArchitecture.ViewModels;
 
 [NavigableFor(typeof(HomeView))]
-public sealed class HomeViewModel
+public sealed partial class HomeViewModel
     : NavigableViewModel
 {
     private readonly IArticleRepository _articleRepository;
 
     public ObservableCollection<Article> Articles { get; } = [];
+
+    public HomeViewModel()
+    {
+        _articleRepository = null!;
+    }
 
     public HomeViewModel(IArticleRepository articleRepository)
     {

@@ -1,10 +1,9 @@
-﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
     <DropShadowEffect
-        x:Key="ContainerShadowXs"
-        Color="Black"
         BlurRadius="8"
-        ShadowDepth="0"
+        Color="Black"
         Direction="270"
-        Opacity="0.2" />
+        Opacity="0.2"
+        ShadowDepth="0"
+        x:Key="ContainerShadowXs" />
 </ResourceDictionary>

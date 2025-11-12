@@ -9,28 +9,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4e03f68c-d391-4fe8-9ac3-1f70f6d17eb2" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/lib/DddCleanArchitecture.Infrastructure/Database/MyDbContextDesignTimeFactory.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.DddCleanArchitecture/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.DddCleanArchitecture/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DddCleanArchitecture.sln.DotSettings.user" beforeDir="false" afterPath="$PROJECT_DIR$/DddCleanArchitecture.sln.DotSettings.user" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/DddCleanArchitecture.Domain/Models/Articles/ArticleDto.cs" beforeDir="false" afterPath="$PROJECT_DIR$/lib/DddCleanArchitecture.Domain/Models/Articles/Article.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/DddCleanArchitecture.Domain/Models/Articles/CommentDto.cs" beforeDir="false" afterPath="$PROJECT_DIR$/lib/DddCleanArchitecture.Domain/Models/Articles/Comment.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/DddCleanArchitecture.Domain/Repositories/Articles/IArticleRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/lib/DddCleanArchitecture.Domain/Repositories/Articles/IArticleRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/DddCleanArchitecture.Infrastructure/Database/Configurations/ArticleConfiguration.cs" beforeDir="false" afterPath="$PROJECT_DIR$/lib/DddCleanArchitecture.Infrastructure/Database/Configurations/ArticleConfiguration.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/DddCleanArchitecture.Infrastructure/Database/Configurations/CommentConfiguration.cs" beforeDir="false" afterPath="$PROJECT_DIR$/lib/DddCleanArchitecture.Infrastructure/Database/Configurations/CommentConfiguration.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/DddCleanArchitecture.Infrastructure/Database/Migrations/20251016200909_Initial.Designer.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/DddCleanArchitecture.Infrastructure/Database/Migrations/20251016200909_Initial.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/DddCleanArchitecture.Infrastructure/Database/Migrations/MyDbContextModelSnapshot.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/DddCleanArchitecture.Infrastructure/Database/Models/Article.cs" beforeDir="false" afterPath="$PROJECT_DIR$/lib/DddCleanArchitecture.Infrastructure/Database/Models/ArticleEntity.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/DddCleanArchitecture.Infrastructure/Database/Models/Comment.cs" beforeDir="false" afterPath="$PROJECT_DIR$/lib/DddCleanArchitecture.Infrastructure/Database/Models/CommentEntity.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/DddCleanArchitecture.Infrastructure/Database/Models/IDbEntity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/lib/DddCleanArchitecture.Infrastructure/Database/Models/IDbEntity.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/DddCleanArchitecture.Infrastructure/Database/MyDbContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/lib/DddCleanArchitecture.Infrastructure/Database/MyDbContext.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/DddCleanArchitecture.Infrastructure/Database/Repositories/Articles/ArticleRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/lib/DddCleanArchitecture.Infrastructure/Database/Repositories/Articles/ArticleRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/DddCleanArchitecture.Infrastructure/Database/Repositories/Articles/Specifications/Criteria/GetByIdCriteriaSpecification.cs" beforeDir="false" afterPath="$PROJECT_DIR$/lib/DddCleanArchitecture.Infrastructure/Database/Repositories/Articles/Specifications/Criteria/GetByIdCriteriaSpecification.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/DddCleanArchitecture.Infrastructure/Database/Repositories/Articles/Specifications/Includes/CommentsIncludeSpecification.cs" beforeDir="false" afterPath="$PROJECT_DIR$/lib/DddCleanArchitecture.Infrastructure/Database/Repositories/Articles/Specifications/Includes/CommentsIncludeSpecification.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/DddCleanArchitecture.Infrastructure/Database/Repositories/Articles/Specifications/Ordering/ByDateOrderedDescSpecification.cs" beforeDir="false" afterPath="$PROJECT_DIR$/lib/DddCleanArchitecture.Infrastructure/Database/Repositories/Articles/Specifications/Ordering/ByDateOrderedDescSpecification.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/DddCleanArchitecture.Infrastructure/Database/Seeding/ArticleSeeder.cs" beforeDir="false" afterPath="$PROJECT_DIR$/lib/DddCleanArchitecture.Infrastructure/Database/Seeding/ArticleSeeder.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/DddCleanArchitecture.Infrastructure/DddCleanArchitecture.Infrastructure.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/lib/DddCleanArchitecture.Infrastructure/DddCleanArchitecture.Infrastructure.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DddCleanArchitecture/MainWindow.xaml" beforeDir="false" afterPath="$PROJECT_DIR$/src/DddCleanArchitecture/MainWindow.xaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/DddCleanArchitecture/ViewModels/HomeViewModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/DddCleanArchitecture/ViewModels/HomeViewModel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DddCleanArchitecture/ViewModels/Navigation/NavigableViewModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/DddCleanArchitecture/ViewModels/Navigation/NavigableViewModel.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/DddCleanArchitecture/Views/HomeView.xaml" beforeDir="false" afterPath="$PROJECT_DIR$/src/DddCleanArchitecture/Views/HomeView.xaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -76,24 +58,24 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    ".NET Project.DddCleanArchitecture.executor": "Debug",
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "main",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "rider.code.cleanup.on.save": "true",
-    "rider.code.cleanup.on.save.profile": "Remove usings",
-    "settings.editor.selected.configurable": "HotReloadSettingsPage",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;.NET Project.DddCleanArchitecture.executor&quot;: &quot;Run&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;rider.code.cleanup.on.save&quot;: &quot;true&quot;,
+    &quot;rider.code.cleanup.on.save.profile&quot;: &quot;Remove usings&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected=".NET Project.DddCleanArchitecture">
     <configuration name="DddCleanArchitecture" type="DotNetProject" factoryName=".NET Project">
       <option name="EXE_PATH" value="" />
@@ -147,7 +129,7 @@
       <workItem from="1762764798975" duration="1460000" />
       <workItem from="1762865965381" duration="14390000" />
       <workItem from="1762881419299" duration="1700000" />
-      <workItem from="1762958954648" duration="1464000" />
+      <workItem from="1762958954648" duration="3560000" />
     </task>
     <task id="LOCAL-00001" summary="feat(navigation)!: navigation service and repo">
       <option name="closed" value="true" />
@@ -197,7 +179,15 @@
       <option name="project" value="LOCAL" />
       <updated>1762879913393</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="feat: adding design time db context">
+      <option name="closed" value="true" />
+      <created>1762960452607</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1762960452607</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -213,7 +203,8 @@
     <MESSAGE value="feat(resources): adding resources and base text sizes" />
     <MESSAGE value="feat(navigation): main view navigation" />
     <MESSAGE value="feat(article): getting article from repo" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat(article): getting article from repo" />
+    <MESSAGE value="feat: adding design time db context" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: adding design time db context" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -230,19 +221,6 @@
           <properties exception="System.Threading.ThreadAbortException" breakIfHandledByOtherCode="false" displayValue="System.Threading.ThreadAbortException" />
           <option name="timeStamp" value="3" />
         </breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/src/DddCleanArchitecture/ViewModels/HomeViewModel.cs</url>
-          <line>28</line>
-          <properties documentPath="C:\Users\vince\Desktop\WIP\DddCleanArchitecture\src\DddCleanArchitecture\ViewModels\HomeViewModel.cs" containingFunctionPresentation="Method 'OnNavigateToAsync'">
-            <startOffsets>
-              <option value="881" />
-            </startOffsets>
-            <endOffsets>
-              <option value="882" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="5" />
-        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
