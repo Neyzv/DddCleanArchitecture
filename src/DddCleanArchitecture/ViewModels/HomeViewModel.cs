@@ -13,7 +13,7 @@ public sealed class HomeViewModel
 {
     private readonly IArticleRepository _articleRepository;
 
-    public ObservableCollection<ArticleDto> Articles { get; } = [];
+    public ObservableCollection<Article> Articles { get; } = [];
 
     public HomeViewModel(IArticleRepository articleRepository)
     {

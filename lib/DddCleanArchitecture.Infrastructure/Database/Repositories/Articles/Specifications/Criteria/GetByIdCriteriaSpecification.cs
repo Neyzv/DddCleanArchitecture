@@ -4,8 +4,8 @@ using DddCleanArchitecture.Infrastructure.Database.Repositories.Specifications;
 
 namespace DddCleanArchitecture.Infrastructure.Database.Repositories.Articles.Specifications.Criteria;
 
-public class GetByIdCriteriaSpecification(int id) : ICriteriaSpecification<Article>
+public class GetByIdCriteriaSpecification(int id) : ICriteriaSpecification<ArticleEntity>
 {
-    public Expression<Func<Article, bool>> Criteria =>
+    public Expression<Func<ArticleEntity, bool>> Criteria =>
         x => x.Id == id;
 }

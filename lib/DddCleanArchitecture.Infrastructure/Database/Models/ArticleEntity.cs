@@ -2,10 +2,10 @@
 
 namespace DddCleanArchitecture.Infrastructure.Database.Models;
 
-public sealed class Article
-    : ArticleDto, IDbEntity
+public sealed class ArticleEntity
+    : Article, IDbEntity
 {
     public int Id { get; set; }
-
-    public new ICollection<Comment> Comments { get; set; } = [];
+    
+    public new ICollection<CommentEntity> Comments { get; set; } = [];
 }

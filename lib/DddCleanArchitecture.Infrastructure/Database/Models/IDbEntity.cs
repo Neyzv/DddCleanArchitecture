@@ -2,5 +2,5 @@
 
 public interface IDbEntity
 {
-    public int Id { get; set; }
+    int Id { get; }
 }

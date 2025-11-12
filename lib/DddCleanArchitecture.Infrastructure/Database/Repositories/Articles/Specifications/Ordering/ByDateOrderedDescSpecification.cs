@@ -5,8 +5,8 @@ using DddCleanArchitecture.Infrastructure.Database.Repositories.Specifications;
 namespace DddCleanArchitecture.Infrastructure.Database.Repositories.Articles.Specifications.Ordering;
 
 public sealed class ByDateOrderedDescSpecification
-    : IOrderedDescSpecification<Article>
+    : IOrderedDescSpecification<ArticleEntity>
 {
-    public Expression<Func<Article, object>> OrderByDescending =>
+    public Expression<Func<ArticleEntity, object>> OrderByDescending =>
         x => x.PublishDate;
 }

@@ -5,11 +5,11 @@ using Microsoft.EntityFrameworkCore.Metadata.Builders;
 namespace DddCleanArchitecture.Infrastructure.Database.Configurations;
 
 public sealed class ArticleConfiguration
-    : DbEntityConfiguration<Article>
+    : DbEntityConfiguration<ArticleEntity>
 {
-    protected override void InternalConfigure(EntityTypeBuilder<Article> builder)
+    protected override void InternalConfigure(EntityTypeBuilder<ArticleEntity> builder)
     {
-        builder.ToTable(nameof(Article));
+        builder.ToTable(nameof(ArticleEntity));
 
         builder.Property(static x => x.Title)
             .HasMaxLength(60)

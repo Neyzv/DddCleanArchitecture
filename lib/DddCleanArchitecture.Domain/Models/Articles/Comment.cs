@@ -1,6 +1,6 @@
 ﻿namespace DddCleanArchitecture.Domain.Models.Articles;
 
-public class CommentDto
+public class Comment
 {
     public required string Content { get; set; }
 

@@ -5,8 +5,8 @@ using DddCleanArchitecture.Infrastructure.Database.Repositories.Specifications;
 namespace DddCleanArchitecture.Infrastructure.Database.Repositories.Articles.Specifications.Includes;
 
 public sealed class CommentsIncludeSpecification
-    : IIncludeSpecification<Article>
+    : IIncludeSpecification<ArticleEntity>
 {
-    public Expression<Func<Article, object>> Include =>
+    public Expression<Func<ArticleEntity, object>> Include =>
         x => x.Comments;
 }

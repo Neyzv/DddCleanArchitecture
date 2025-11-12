@@ -2,8 +2,8 @@
 
 namespace DddCleanArchitecture.Infrastructure.Database.Models;
 
-public sealed class Comment
-    : CommentDto, IDbEntity
+public sealed class CommentEntity
+    : Comment, IDbEntity
 {
     public int Id { get; set; }
 

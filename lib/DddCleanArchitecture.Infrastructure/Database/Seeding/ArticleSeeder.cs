@@ -8,14 +8,14 @@ public sealed class ArticleSeeder
     : ISeeder
 {
     public bool ShouldBeApplied(DbContext context) =>
-        !context.Set<Article>().Any();
+        !context.Set<ArticleEntity>().Any();
 
-    private List<Article> GenerateArticles()
+    private static List<ArticleEntity> GenerateArticles()
     {
-        var commentFaker = new Faker<Comment>()
+        var commentFaker = new Faker<CommentEntity>()
             .RuleFor(static x => x.Content, static x => x.Lorem.Sentence(4, 16));
 
-        var faker = new Faker<Article>()
+        var faker = new Faker<ArticleEntity>()
             .RuleFor(static x => x.Title, static x => x.Lorem.Sentence(x.Random.Int(1, 4)))
             .RuleFor(static x => x.Content, static x => x.Lorem.Paragraphs(x.Random.Int(1, 3)))
             .RuleFor(static x => x.PublishDate, static x => x.Date.Recent(60))
@@ -37,17 +37,17 @@ public sealed class ArticleSeeder
 
     public void Seed(DbContext context)
     {
-        context.Set<Article>().AddRange(GenerateArticles());
+        context.Set<ArticleEntity>().AddRange(GenerateArticles());
         context.SaveChanges();
     }
 
     public async Task<bool> ShouldBeAppliedAsync(DbContext context, CancellationToken token) =>
-        !await context.Set<Article>().AnyAsync(token).ConfigureAwait(false);
+        !await context.Set<ArticleEntity>().AnyAsync(token).ConfigureAwait(false);
 
     public async Task SeedAsync(DbContext context, CancellationToken token)
     {
         await context
-            .Set<Article>()
+            .Set<ArticleEntity>()
             .AddRangeAsync(GenerateArticles(), token)
             .ConfigureAwait(false);
 

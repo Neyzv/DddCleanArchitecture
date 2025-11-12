@@ -5,7 +5,8 @@ using Microsoft.EntityFrameworkCore;
 
 namespace DddCleanArchitecture.Infrastructure.Database;
 
-public sealed class MyDbContext(DbContextOptions<MyDbContext> options, IEnumerable<ISeeder> seeders) : DbContext(options)
+public sealed class MyDbContext(DbContextOptions<MyDbContext> options, IEnumerable<ISeeder> seeders)
+    : DbContext(options)
 {
     private readonly ImmutableArray<ISeeder> _seeders = [..seeders];
 

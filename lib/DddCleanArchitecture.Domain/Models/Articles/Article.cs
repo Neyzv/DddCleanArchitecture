@@ -1,6 +1,6 @@
 ﻿namespace DddCleanArchitecture.Domain.Models.Articles;
 
-public class ArticleDto
+public class Article
 {
     public required string Title { get; set; }
 
@@ -8,5 +8,5 @@ public class ArticleDto
 
     public DateTime PublishDate { get; set; }
 
-    public ICollection<CommentDto> Comments { get; set; } = [];
+    public List<Comment> Comments { get; set; } = [];
 }

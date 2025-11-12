@@ -17,7 +17,7 @@ namespace DddCleanArchitecture.Infrastructure.Database.Migrations
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "9.0.10");
 
-            modelBuilder.Entity("DddCleanArchitecture.Infrastructure.Database.Models.Article", b =>
+            modelBuilder.Entity("DddCleanArchitecture.Infrastructure.Database.Models.ArticleEntity", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -38,10 +38,10 @@ namespace DddCleanArchitecture.Infrastructure.Database.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Article", (string)null);
+                    b.ToTable("ArticleEntity", (string)null);
                 });
 
-            modelBuilder.Entity("DddCleanArchitecture.Infrastructure.Database.Models.Comment", b =>
+            modelBuilder.Entity("DddCleanArchitecture.Infrastructure.Database.Models.CommentEntity", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -62,19 +62,19 @@ namespace DddCleanArchitecture.Infrastructure.Database.Migrations
 
                     b.HasIndex("ArticleId");
 
-                    b.ToTable("Comment", (string)null);
+                    b.ToTable("CommentEntity", (string)null);
                 });
 
-            modelBuilder.Entity("DddCleanArchitecture.Infrastructure.Database.Models.Comment", b =>
+            modelBuilder.Entity("DddCleanArchitecture.Infrastructure.Database.Models.CommentEntity", b =>
                 {
-                    b.HasOne("DddCleanArchitecture.Infrastructure.Database.Models.Article", null)
+                    b.HasOne("DddCleanArchitecture.Infrastructure.Database.Models.ArticleEntity", null)
                         .WithMany("Comments")
                         .HasForeignKey("ArticleId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("DddCleanArchitecture.Infrastructure.Database.Models.Article", b =>
+            modelBuilder.Entity("DddCleanArchitecture.Infrastructure.Database.Models.ArticleEntity", b =>
                 {
                     b.Navigation("Comments");
                 });

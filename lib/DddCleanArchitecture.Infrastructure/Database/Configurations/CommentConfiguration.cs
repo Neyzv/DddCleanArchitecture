@@ -5,17 +5,17 @@ using Microsoft.EntityFrameworkCore.Metadata.Builders;
 namespace DddCleanArchitecture.Infrastructure.Database.Configurations;
 
 public sealed class CommentConfiguration
-    : DbEntityConfiguration<Comment>
+    : DbEntityConfiguration<CommentEntity>
 {
-    protected override void InternalConfigure(EntityTypeBuilder<Comment> builder)
+    protected override void InternalConfigure(EntityTypeBuilder<CommentEntity> builder)
     {
-        builder.ToTable(nameof(Comment));
-        
+        builder.ToTable(nameof(CommentEntity));
+
         builder
             .Property(static x => x.Content)
             .HasMaxLength(100)
             .IsRequired();
-        
+
         builder.Property(static x => x.CreatedOn)
             .IsRequired();
     }

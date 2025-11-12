@@ -12,7 +12,7 @@ namespace DddCleanArchitecture.Infrastructure.Database.Migrations
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
-                name: "Article",
+                name: "ArticleEntity",
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "INTEGER", nullable: false)
@@ -23,33 +23,33 @@ namespace DddCleanArchitecture.Infrastructure.Database.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Article", x => x.Id);
+                    table.PrimaryKey("PK_ArticleEntity", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
-                name: "Comment",
+                name: "CommentEntity",
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "INTEGER", nullable: false)
                         .Annotation("Sqlite:Autoincrement", true),
+                    ArticleId = table.Column<int>(type: "INTEGER", nullable: false),
                     Content = table.Column<string>(type: "TEXT", maxLength: 100, nullable: false),
-                    CreatedOn = table.Column<DateTime>(type: "TEXT", nullable: false),
-                    ArticleId = table.Column<int>(type: "INTEGER", nullable: false)
+                    CreatedOn = table.Column<DateTime>(type: "TEXT", nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Comment", x => x.Id);
+                    table.PrimaryKey("PK_CommentEntity", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_Comment_Article_ArticleId",
+                        name: "FK_CommentEntity_ArticleEntity_ArticleId",
                         column: x => x.ArticleId,
-                        principalTable: "Article",
+                        principalTable: "ArticleEntity",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateIndex(
-                name: "IX_Comment_ArticleId",
-                table: "Comment",
+                name: "IX_CommentEntity_ArticleId",
+                table: "CommentEntity",
                 column: "ArticleId");
         }
 
@@ -57,10 +57,10 @@ namespace DddCleanArchitecture.Infrastructure.Database.Migrations
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "Comment");
+                name: "CommentEntity");
 
             migrationBuilder.DropTable(
-                name: "Article");
+                name: "ArticleEntity");
         }
     }
 }
