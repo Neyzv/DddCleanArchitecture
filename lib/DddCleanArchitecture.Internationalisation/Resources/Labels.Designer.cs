@@ -60,6 +60,15 @@ namespace DddCleanArchitecture.Internationalisation.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Comment(s).
+        /// </summary>
+        public static string Comments {
+            get {
+                return ResourceManager.GetString("Comments", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Home.
         /// </summary>
         public static string Home {

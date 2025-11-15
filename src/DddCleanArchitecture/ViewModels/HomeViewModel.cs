@@ -1,7 +1,8 @@
 ﻿using System.Collections.ObjectModel;
 using DddCleanArchitecture.Domain.Attributes;
-using DddCleanArchitecture.Domain.Models.Articles;
 using DddCleanArchitecture.Domain.Repositories.Articles;
+using DddCleanArchitecture.Internationalisation.Resources;
+using DddCleanArchitecture.Models.Articles;
 using DddCleanArchitecture.ViewModels.Navigation;
 using DddCleanArchitecture.Views;
 
@@ -13,7 +14,10 @@ public sealed partial class HomeViewModel
 {
     private readonly IArticleRepository _articleRepository;
 
-    public ObservableCollection<Article> Articles { get; } = [];
+    public string CommentsLabel =>
+        Labels.Comments;
+
+    public ObservableCollection<ArticlePresenter> Articles { get; } = [];
 
     public HomeViewModel()
     {
@@ -30,6 +34,6 @@ public sealed partial class HomeViewModel
         Articles.Clear();
 
         foreach (var article in await _articleRepository.GetAllArticlesOrderedDescByDate())
-            Articles.Add(article);
+            Articles.Add(new ArticlePresenter(article));
     }
 }

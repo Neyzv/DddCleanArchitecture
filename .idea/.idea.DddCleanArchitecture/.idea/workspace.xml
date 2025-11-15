@@ -9,10 +9,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4e03f68c-d391-4fe8-9ac3-1f70f6d17eb2" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/DddCleanArchitecture/Models/Articles/ArticlePresenter.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.DddCleanArchitecture/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.DddCleanArchitecture/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DddCleanArchitecture/MainWindow.xaml" beforeDir="false" afterPath="$PROJECT_DIR$/src/DddCleanArchitecture/MainWindow.xaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/DddCleanArchitecture.Internationalisation/Resources/Labels.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/lib/DddCleanArchitecture.Internationalisation/Resources/Labels.Designer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/DddCleanArchitecture.Internationalisation/Resources/Labels.fr-FR.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/lib/DddCleanArchitecture.Internationalisation/Resources/Labels.fr-FR.Designer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/DddCleanArchitecture.Internationalisation/Resources/Labels.fr-FR.resx" beforeDir="false" afterPath="$PROJECT_DIR$/lib/DddCleanArchitecture.Internationalisation/Resources/Labels.fr-FR.resx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/DddCleanArchitecture.Internationalisation/Resources/Labels.resx" beforeDir="false" afterPath="$PROJECT_DIR$/lib/DddCleanArchitecture.Internationalisation/Resources/Labels.resx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DddCleanArchitecture/Assets/Resources/Shadows.xaml" beforeDir="false" afterPath="$PROJECT_DIR$/src/DddCleanArchitecture/Assets/Resources/Shadows.xaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/DddCleanArchitecture/ViewModels/HomeViewModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/DddCleanArchitecture/ViewModels/HomeViewModel.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DddCleanArchitecture/ViewModels/Navigation/NavigableViewModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/DddCleanArchitecture/ViewModels/Navigation/NavigableViewModel.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/DddCleanArchitecture/Views/HomeView.xaml" beforeDir="false" afterPath="$PROJECT_DIR$/src/DddCleanArchitecture/Views/HomeView.xaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -42,9 +46,9 @@
   }
 }</component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$USER_HOME$/AppData/Local/Temp/SourceGeneratedDocuments/657252444F15D985D0B0BDE2/DddCleanArchitecture.SourceGenerators/DddCleanArchitecture.SourceGenerators.NavigationRepository.NavigationRepositorySourceGenerator/NavigationRepository.g.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/76803a04e31b4fee99d90bcbfc5a6bdde8e930/f2/03dee8dc/IList`1.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/a9ce663431c24c9aba988159f5e36465291420/6d/f45f99e9/DbContext.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/fd047edb21024e678e3b00229ab429b8838908/ea/8578ed61/Color.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/1b768892bf2e34dd6b8d8f15f37fe67ea78348d57d5269781271b8fec7b24/Faker[T].cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/1b81cb3be224213a6a73519b6e340a628d9a1fb8629c351a186a26f6376669/List.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
@@ -130,6 +134,9 @@
       <workItem from="1762865965381" duration="14390000" />
       <workItem from="1762881419299" duration="1700000" />
       <workItem from="1762958954648" duration="3560000" />
+      <workItem from="1762963009763" duration="2951000" />
+      <workItem from="1763129301262" duration="3898000" />
+      <workItem from="1763212697352" duration="1826000" />
     </task>
     <task id="LOCAL-00001" summary="feat(navigation)!: navigation service and repo">
       <option name="closed" value="true" />
@@ -187,7 +194,15 @@
       <option name="project" value="LOCAL" />
       <updated>1762960452607</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="feat(article): rendering the article">
+      <option name="closed" value="true" />
+      <created>1762965930847</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1762965930847</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -204,7 +219,8 @@
     <MESSAGE value="feat(navigation): main view navigation" />
     <MESSAGE value="feat(article): getting article from repo" />
     <MESSAGE value="feat: adding design time db context" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: adding design time db context" />
+    <MESSAGE value="feat(article): rendering the article" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat(article): rendering the article" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -223,5 +239,9 @@
         </breakpoint>
       </breakpoints>
     </breakpoint-manager>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>

@@ -21,4 +21,7 @@
     <data name="Home" xml:space="preserve">
         <value>Accueil</value>
     </data>
+    <data name="Comments" xml:space="preserve">
+        <value>Commentaire(s)</value>
+    </data>
 </root>
