@@ -10,7 +10,7 @@
 
     <ItemGroup>
         <ProjectReference Include="..\..\lib\DddCleanArchitecture.Application\DddCleanArchitecture.Application.csproj"/>
-        <ProjectReference Include="..\..\lib\DddCleanArchitecture.Internationalisation\DddCleanArchitecture.Internationalisation.csproj" />
+        <ProjectReference Include="..\..\lib\DddCleanArchitecture.Internationalisation\DddCleanArchitecture.Internationalisation.csproj"/>
         <ProjectReference Include="..\..\lib\DddCleanArchitecture.SourceGenerators\DddCleanArchitecture.SourceGenerators.csproj"
                           OutputItemType="Analyzer"
                           ReferenceOutputAssembly="false"/>
@@ -27,6 +27,7 @@
         <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="9.0.10"/>
         <PackageReference Include="Microsoft.Extensions.Options" Version="9.0.10"/>
         <PackageReference Include="Microsoft.Extensions.Options.ConfigurationExtensions" Version="9.0.10"/>
+        <PackageReference Include="SharpVectors.Wpf" Version="1.8.5"/>
     </ItemGroup>
 
     <ItemGroup>
@@ -39,6 +40,10 @@
         <Content Include="appsettings.Debug.json" Condition="'$(Configuration)' == 'Debug'">
             <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
         </Content>
+        <None Remove="Assets\Images\flag_fr.svg"/>
+        <Resource Include="Assets\Images\flag_fr.svg"/>
+        <None Remove="Assets\Images\flag_usa.svg"/>
+        <Resource Include="Assets\Images\flag_usa.svg"/>
     </ItemGroup>
 
 </Project>

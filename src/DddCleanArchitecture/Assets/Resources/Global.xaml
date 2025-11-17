@@ -2,5 +2,6 @@
     <ResourceDictionary.MergedDictionaries>
         <ResourceDictionary Source="FontSize.xaml" />
         <ResourceDictionary Source="Shadows.xaml" />
+        <ResourceDictionary Source="Converters.xaml" />
     </ResourceDictionary.MergedDictionaries>
 </ResourceDictionary>

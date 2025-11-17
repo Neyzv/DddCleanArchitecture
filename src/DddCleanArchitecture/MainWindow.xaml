@@ -10,6 +10,7 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:markup="clr-namespace:DddCleanArchitecture.MarkupExtensions"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:svg="http://sharpvectors.codeplex.com/svgc/"
     xmlns:vm="clr-namespace:DddCleanArchitecture.ViewModels"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
     <!--  For autocompletion only  -->
@@ -32,8 +33,53 @@
             Effect="{StaticResource ContainerShadowXs}"
             Grid.Row="0"
             HorizontalAlignment="Stretch">
-            <StackPanel HorizontalAlignment="Center" Orientation="Horizontal">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="20*" />
+                <ColumnDefinition Width="60*" />
+                <ColumnDefinition Width="20*" />
+            </Grid.ColumnDefinitions>
+
+            <StackPanel
+                Grid.Column="1"
+                HorizontalAlignment="Center"
+                Orientation="Horizontal">
                 <Button Content="{Binding HomeLabel, Mode=OneWay}" />
+            </StackPanel>
+
+            <StackPanel
+                Grid.Column="2"
+                HorizontalAlignment="Right"
+                Margin="0,0,10,0"
+                Orientation="Horizontal">
+                <Button Command="{Binding ChangeLanguageToFrenchCommand, Mode=OneWay}">
+                    <Border
+                        CornerRadius="4"
+                        Height="{Binding Source={StaticResource TextBase}, Converter={StaticResource MultiplyByHalfConverter}}"
+                        Width="{Binding Source={StaticResource TextBase}, Converter={StaticResource MultiplyByTwoConverter}}">
+                        <Border.Background>
+                            <VisualBrush Stretch="Fill">
+                                <VisualBrush.Visual>
+                                    <svg:SvgViewbox Source="pack://application:,,,/Assets/Images/flag_fr.svg" />
+                                </VisualBrush.Visual>
+                            </VisualBrush>
+                        </Border.Background>
+                    </Border>
+                </Button>
+
+                <Button Command="{Binding ChangeLanguageToEnglishCommand, Mode=OneTime}" Margin="5,0,0,0">
+                    <Border
+                        CornerRadius="4"
+                        Height="{Binding Source={StaticResource TextBase}, Converter={StaticResource MultiplyByHalfConverter}}"
+                        Width="{Binding Source={StaticResource TextBase}, Converter={StaticResource MultiplyByTwoConverter}}">
+                        <Border.Background>
+                            <VisualBrush Stretch="Fill">
+                                <VisualBrush.Visual>
+                                    <svg:SvgViewbox Source="pack://application:,,,/Assets/Images/flag_usa.svg" />
+                                </VisualBrush.Visual>
+                            </VisualBrush>
+                        </Border.Background>
+                    </Border>
+                </Button>
             </StackPanel>
         </Grid>
 

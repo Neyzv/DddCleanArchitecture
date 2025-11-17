@@ -1,0 +1,7 @@
+﻿<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:converters="clr-namespace:DddCleanArchitecture.Converters"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <converters:MultiplyConverter Factor="1.5" x:Key="MultiplyByHalfConverter" />
+    <converters:MultiplyConverter Factor="2" x:Key="MultiplyByTwoConverter" />
+</ResourceDictionary>
