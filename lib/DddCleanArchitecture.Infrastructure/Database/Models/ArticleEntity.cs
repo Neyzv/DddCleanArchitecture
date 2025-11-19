@@ -1,11 +1,15 @@
-﻿using DddCleanArchitecture.Domain.Models.Articles;
-
-namespace DddCleanArchitecture.Infrastructure.Database.Models;
+﻿namespace DddCleanArchitecture.Infrastructure.Database.Models;
 
 public sealed class ArticleEntity
-    : Article, IDbEntity
+    : IDbEntity
 {
     public int Id { get; set; }
-    
-    public new ICollection<CommentEntity> Comments { get; set; } = [];
+
+    public required string Title { get; set; }
+
+    public required string Content { get; set; }
+
+    public DateTime PublishDate { get; set; }
+
+    public List<CommentEntity> Comments { get; set; } = [];
 }

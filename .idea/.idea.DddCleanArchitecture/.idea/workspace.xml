@@ -9,16 +9,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4e03f68c-d391-4fe8-9ac3-1f70f6d17eb2" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/DddCleanArchitecture/Assets/Images/flag_fr.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/DddCleanArchitecture/Assets/Images/flag_usa.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/DddCleanArchitecture/Assets/Resources/Converters.xaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/DddCleanArchitecture/Converters/MultiplyConverter.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/DddCleanArchitecture.Infrastructure/Extensions/DbEntityExtensions.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/DddCleanArchitecture/ViewModels/ArticleViewModel.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/DddCleanArchitecture/Views/ArticleView.xaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/DddCleanArchitecture/Views/ArticleView.xaml.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.DddCleanArchitecture/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.DddCleanArchitecture/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DddCleanArchitecture.sln.DotSettings.user" beforeDir="false" afterPath="$PROJECT_DIR$/DddCleanArchitecture.sln.DotSettings.user" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DddCleanArchitecture/Assets/Resources/Global.xaml" beforeDir="false" afterPath="$PROJECT_DIR$/src/DddCleanArchitecture/Assets/Resources/Global.xaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DddCleanArchitecture/DddCleanArchitecture.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/src/DddCleanArchitecture/DddCleanArchitecture.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DddCleanArchitecture/MainWindow.xaml" beforeDir="false" afterPath="$PROJECT_DIR$/src/DddCleanArchitecture/MainWindow.xaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DddCleanArchitecture/ViewModels/MainWindowViewModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/DddCleanArchitecture/ViewModels/MainWindowViewModel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/DddCleanArchitecture.Infrastructure/Database/Models/ArticleEntity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/lib/DddCleanArchitecture.Infrastructure/Database/Models/ArticleEntity.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/DddCleanArchitecture.Infrastructure/Database/Models/CommentEntity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/lib/DddCleanArchitecture.Infrastructure/Database/Models/CommentEntity.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/DddCleanArchitecture.Infrastructure/Database/Repositories/Articles/ArticleRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/lib/DddCleanArchitecture.Infrastructure/Database/Repositories/Articles/ArticleRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DddCleanArchitecture/Models/Articles/ArticlePresenter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/DddCleanArchitecture/Models/Articles/ArticlePresenter.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -141,7 +140,10 @@
       <workItem from="1762963009763" duration="2951000" />
       <workItem from="1763129301262" duration="3898000" />
       <workItem from="1763212697352" duration="5339000" />
-      <workItem from="1763368469345" duration="2579000" />
+      <workItem from="1763368469345" duration="5295000" />
+      <workItem from="1763457167519" duration="1376000" />
+      <workItem from="1763477431324" duration="364000" />
+      <workItem from="1763546112560" duration="1842000" />
     </task>
     <task id="LOCAL-00001" summary="feat(navigation)!: navigation service and repo">
       <option name="closed" value="true" />
@@ -215,7 +217,15 @@
       <option name="project" value="LOCAL" />
       <updated>1763216449023</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="feat(i18n): internationalisation">
+      <option name="closed" value="true" />
+      <created>1763371477847</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1763371477847</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -234,7 +244,8 @@
     <MESSAGE value="feat: adding design time db context" />
     <MESSAGE value="feat(article): rendering the article" />
     <MESSAGE value="feat(article): article presenter" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat(article): article presenter" />
+    <MESSAGE value="feat(i18n): internationalisation" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat(i18n): internationalisation" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -251,6 +262,32 @@
           <properties exception="System.Threading.ThreadAbortException" breakIfHandledByOtherCode="false" displayValue="System.Threading.ThreadAbortException" />
           <option name="timeStamp" value="3" />
         </breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/src/DddCleanArchitecture/ViewModels/HomeViewModel.cs</url>
+          <line>35</line>
+          <properties documentPath="C:\Users\vince\Desktop\WIP\DddCleanArchitecture\src\DddCleanArchitecture\ViewModels\HomeViewModel.cs" containingFunctionPresentation="Method 'OnNavigateToAsync'">
+            <startOffsets>
+              <option value="964" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1047" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/src/DddCleanArchitecture/Models/Articles/ArticlePresenter.cs</url>
+          <line>14</line>
+          <properties documentPath="C:\Users\vince\Desktop\WIP\DddCleanArchitecture\src\DddCleanArchitecture\Models\Articles\ArticlePresenter.cs" containingFunctionPresentation="Property 'CommentCount'">
+            <startOffsets>
+              <option value="340" />
+            </startOffsets>
+            <endOffsets>
+              <option value="362" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>

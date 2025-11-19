@@ -1,0 +1,22 @@
+﻿<UserControl
+    d:DesignHeight="300"
+    d:DesignWidth="300"
+    mc:Ignorable="d"
+    x:Class="DddCleanArchitecture.Views.ArticleView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:markup="clr-namespace:DddCleanArchitecture.MarkupExtensions"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:vm="clr-namespace:DddCleanArchitecture.ViewModels"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <!--  For autocompletion only  -->
+    <d:UserControl.DataContext>
+        <vm:ArticleViewModel />
+    </d:UserControl.DataContext>
+
+    <UserControl.DataContext>
+        <markup:ResolvedViewModel ViewModel="{x:Type vm:ArticleViewModel}" />
+    </UserControl.DataContext>
+
+    <Grid />
+</UserControl>

@@ -3,6 +3,7 @@ using DddCleanArchitecture.Infrastructure.Database.Models;
 using DddCleanArchitecture.Infrastructure.Database.Repositories.Articles.Specifications.Criteria;
 using DddCleanArchitecture.Infrastructure.Database.Repositories.Articles.Specifications.Includes;
 using DddCleanArchitecture.Infrastructure.Database.Repositories.Articles.Specifications.Ordering;
+using DddCleanArchitecture.Infrastructure.Extensions;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using Article = DddCleanArchitecture.Domain.Models.Articles.Article;
@@ -13,12 +14,13 @@ public sealed class ArticleRepository(IDbContextFactory<MyDbContext> dbContextFa
     : EntityRepository<ArticleEntity>(dbContextFactory), IArticleRepository
 {
     public async Task<IEnumerable<Article>> GetAllArticlesOrderedDescByDate() =>
-        (await GetAllAsync(serviceProvider.GetRequiredService<ByDateOrderedDescSpecification>()).ConfigureAwait(false))
-        .Select(static Article (x) => x);
+        (await GetAllAsync(serviceProvider.GetRequiredService<ByDateOrderedDescSpecification>(),
+            serviceProvider.GetRequiredService<CommentsIncludeSpecification>()).ConfigureAwait(false))
+        .Select(static Article (x) => x.MapToArticle());
 
     public async Task<Article?> GetArticleByIdWithComments(int id) =>
-        await GetAsync(
+        (await GetAsync(
             new GetByIdCriteriaSpecification(id),
             serviceProvider.GetRequiredService<CommentsIncludeSpecification>()
-        ).ConfigureAwait(false);
+        ).ConfigureAwait(false))?.MapToArticle();
 }

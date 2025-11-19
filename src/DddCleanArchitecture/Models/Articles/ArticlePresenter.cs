@@ -15,5 +15,5 @@ public sealed class ArticlePresenter(Article article)
         article.Comments.Count;
 
     public SolidColorBrush IllusColor { get; } =
-        new SolidColorBrush(Color.FromRgb((byte)Random.Shared.Next(0, 255), (byte)Random.Shared.Next(0, 255), (byte)Random.Shared.Next(0, 255)));
+        new(Color.FromRgb((byte)Random.Shared.Next(0, 255), (byte)Random.Shared.Next(0, 255), (byte)Random.Shared.Next(0, 255)));
 }
