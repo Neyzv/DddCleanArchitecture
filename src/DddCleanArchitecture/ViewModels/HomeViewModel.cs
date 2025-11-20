@@ -1,9 +1,12 @@
 ﻿using System.Collections.ObjectModel;
+using CommunityToolkit.Mvvm.Input;
 using DddCleanArchitecture.Domain.Attributes;
+using DddCleanArchitecture.Domain.Models.Articles;
 using DddCleanArchitecture.Domain.Repositories.Articles;
 using DddCleanArchitecture.Domain.Services.Internationalisation;
 using DddCleanArchitecture.Internationalisation.Resources;
 using DddCleanArchitecture.Models.Articles;
+using DddCleanArchitecture.Services.Navigation;
 using DddCleanArchitecture.ViewModels.Navigation;
 using DddCleanArchitecture.Views;
 
@@ -14,6 +17,7 @@ public sealed partial class HomeViewModel
     : NavigableViewModel
 {
     private readonly IArticleRepository _articleRepository;
+    private readonly INavigationService _navigationService;
 
 #pragma warning disable CA1822
     public string CommentsLabel =>
@@ -25,12 +29,16 @@ public sealed partial class HomeViewModel
     public HomeViewModel()
     {
         _articleRepository = null!;
+        _navigationService = null!;
     }
 
-    public HomeViewModel(IArticleRepository articleRepository, IInternationalisationService internationalisationService)
+    public HomeViewModel(IArticleRepository articleRepository,
+        IInternationalisationService internationalisationService,
+        INavigationService navigationService)
     {
         _articleRepository = articleRepository;
-        
+        _navigationService = navigationService;
+
         internationalisationService.LanguageChanged += OnLanguageChanged;
     }
 
@@ -45,5 +53,11 @@ public sealed partial class HomeViewModel
 
         foreach (var article in await _articleRepository.GetAllArticlesOrderedDescByDate())
             Articles.Add(new ArticlePresenter(article));
+    }
+
+    [RelayCommand]
+    private async Task NavigateToArticleAsync(Article article)
+    {
+        await _navigationService.NavigateToAsync<ArticleView>();
     }
 }

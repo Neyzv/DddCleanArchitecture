@@ -28,13 +28,32 @@ public sealed partial class NavigationRepositorySourceGenerator
 
         using (writer.CreateScope())
         {
-            // Static fields
+            // Private readonly fields
             writer
-                .AppendLine("private readonly Dictionary<Type, Control> _registeredView;")
+                .AppendLine("private readonly IServiceProvider _serviceProvider;")
+                .AppendLine();
+
+            // Private fields
+            writer
+                .AppendLine("private Dictionary<Type, Control>? _registeredView;")
                 .AppendLine();
 
             // Constructors
             writer.AppendLine("public NavigationRepository(IServiceProvider serviceProvider)");
+            using (writer.CreateScope())
+            {
+                writer.AppendLine("_serviceProvider = serviceProvider;");
+            }
+
+            writer.AppendLine();
+
+            // Public methods
+            writer
+                .AppendLine()
+                .AppendLine("/// <summary>")
+                .AppendLine("/// Initializes this repository, this is needed before any usage.")
+                .AppendLine("/// </summary>")
+                .AppendLine("private void Initialize()");
             using (writer.CreateScope())
             {
                 writer
@@ -62,7 +81,7 @@ public sealed partial class NavigationRepositorySourceGenerator
                             .AppendIndent()
                             .Append("DataContext = ActivatorUtilities.CreateInstance<")
                             .Append(navigableView.ViewModelTypeName)
-                            .Append(">(serviceProvider)");
+                            .Append(">(_serviceProvider)");
                         writer.IndentationLevel--;
 
                         writer
@@ -88,6 +107,9 @@ public sealed partial class NavigationRepositorySourceGenerator
                 .AppendIndentedLine("where TView : Control");
             using (writer.CreateScope())
             {
+                writer.AppendLine("if (_registeredView is null)")
+                    .AppendIndentedLine("Initialize();");
+
                 writer.AppendLine("return (TView?)(_registeredView.TryGetValue(typeof(TView), out var view) ? view : default);");
             }
         }
