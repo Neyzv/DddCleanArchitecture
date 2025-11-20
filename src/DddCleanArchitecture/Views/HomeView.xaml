@@ -64,7 +64,7 @@
                                     <Run Text="{Binding PublishDate, Mode=OneTime}" />
                                     <Run Text="-" />
                                     <Run Text="{Binding CommentCount, Mode=OneTime}" />
-                                    <Run Text="{Binding DataContext.CommentsLabel, ElementName=Home, Mode=OneTime}" />
+                                    <Run Text="{Binding DataContext.CommentsLabel, ElementName=Home, Mode=OneWay}" />
                                 </TextBlock>
                             </StackPanel>
                         </Grid>
