@@ -43,7 +43,7 @@
                 Grid.Column="1"
                 HorizontalAlignment="Center"
                 Orientation="Horizontal">
-                <Button Content="{Binding HomeLabel, Mode=OneWay}" />
+                <Button Command="{Binding NavigateToHomeCommand, Mode=OneTime}" Content="{Binding HomeLabel, Mode=OneWay}" />
             </StackPanel>
 
             <StackPanel

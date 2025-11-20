@@ -24,8 +24,8 @@ public static class ServiceCollectionExtensions
                 o.UseSqlite(string.Format(dbConfig.ConnectionString, dbConfig.DatabaseName));
             })
             .AddApplicationLayer()
-            .AddTransient<NavigationRepository>()
-            .AddTransient<INavigationService, NavigationService>()
+            .AddScoped<NavigationRepository>()
+            .AddScoped<INavigationService, NavigationService>()
             .AddSingleton<MainWindowViewModel>()
             .AddSingleton<MainWindow>();
 

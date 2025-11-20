@@ -1,7 +1,6 @@
 ﻿using System.Collections.ObjectModel;
 using CommunityToolkit.Mvvm.Input;
 using DddCleanArchitecture.Domain.Attributes;
-using DddCleanArchitecture.Domain.Models.Articles;
 using DddCleanArchitecture.Domain.Repositories.Articles;
 using DddCleanArchitecture.Domain.Services.Internationalisation;
 using DddCleanArchitecture.Internationalisation.Resources;
@@ -56,7 +55,7 @@ public sealed partial class HomeViewModel
     }
 
     [RelayCommand]
-    private async Task NavigateToArticleAsync(Article article)
+    private async Task NavigateToArticleAsync(ArticlePresenter article)
     {
         await _navigationService.NavigateToAsync<ArticleView>();
     }

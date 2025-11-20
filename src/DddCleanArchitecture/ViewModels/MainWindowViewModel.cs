@@ -16,7 +16,7 @@ public sealed partial class MainWindowViewModel
     private readonly IInternationalisationService _internationalisationService;
 
     [ObservableProperty] private Control? _current;
-    
+
 #pragma warning disable CA1822
     public string HomeLabel =>
 #pragma warning restore CA1822
@@ -48,6 +48,10 @@ public sealed partial class MainWindowViewModel
     {
         Current = newView;
     }
+
+    [RelayCommand]
+    private Task NavigateToHomeAsync() =>
+        _navigationService.NavigateToAsync<HomeView>();
 
     [RelayCommand]
     private void ChangeLanguageToFrench() =>

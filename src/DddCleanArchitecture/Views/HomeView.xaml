@@ -6,7 +6,6 @@
     x:Name="Home"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-    xmlns:markup="clr-namespace:DddCleanArchitecture.MarkupExtensions"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:vm="clr-namespace:DddCleanArchitecture.ViewModels"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
@@ -31,6 +30,8 @@
         <ItemsControl.ItemTemplate>
             <DataTemplate>
                 <Button
+                    Command="{Binding DataContext.NavigateToArticleCommand, ElementName=Home, Mode=OneTime}"
+                    CommandParameter="{Binding ., Mode=OneTime}"
                     HorizontalContentAlignment="Stretch"
                     Margin="10"
                     VerticalContentAlignment="Stretch">
