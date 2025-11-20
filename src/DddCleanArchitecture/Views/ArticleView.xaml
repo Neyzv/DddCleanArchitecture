@@ -14,9 +14,5 @@
         <vm:ArticleViewModel />
     </d:UserControl.DataContext>
 
-    <UserControl.DataContext>
-        <markup:ResolvedViewModel ViewModel="{x:Type vm:ArticleViewModel}" />
-    </UserControl.DataContext>
-
     <Grid />
 </UserControl>

@@ -15,10 +15,6 @@
         <vm:HomeViewModel />
     </d:UserControl.DataContext>
 
-    <UserControl.DataContext>
-        <markup:ResolvedViewModel ViewModel="{x:Type vm:HomeViewModel}" />
-    </UserControl.DataContext>
-
     <ItemsControl
         HorizontalAlignment="Stretch"
         ItemsSource="{Binding Articles, Mode=OneWay}"
