@@ -16,6 +16,7 @@ public sealed partial class HomeViewModel
     : NavigableViewModel
 {
     private readonly IArticleRepository _articleRepository;
+    private readonly IInternationalisationService _internationalisationService;
     private readonly INavigationService _navigationService;
 
 #pragma warning disable CA1822
@@ -28,6 +29,7 @@ public sealed partial class HomeViewModel
     public HomeViewModel()
     {
         _articleRepository = null!;
+        _internationalisationService = null!;
         _navigationService = null!;
     }
 
@@ -36,9 +38,8 @@ public sealed partial class HomeViewModel
         INavigationService navigationService)
     {
         _articleRepository = articleRepository;
+        _internationalisationService = internationalisationService;
         _navigationService = navigationService;
-
-        internationalisationService.LanguageChanged += OnLanguageChanged;
     }
 
     private void OnLanguageChanged()
@@ -48,10 +49,19 @@ public sealed partial class HomeViewModel
 
     public override async Task OnNavigateToAsync()
     {
+        _internationalisationService.LanguageChanged += OnLanguageChanged;
+
         Articles.Clear();
 
         foreach (var article in await _articleRepository.GetAllArticlesOrderedDescByDate())
             Articles.Add(new ArticlePresenter(article));
+    }
+
+    public override Task OnNavigatedFromAsync()
+    {
+        _internationalisationService.LanguageChanged -= OnLanguageChanged;
+
+        return base.OnNavigatedFromAsync();
     }
 
     [RelayCommand]

@@ -9,12 +9,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4e03f68c-d391-4fe8-9ac3-1f70f6d17eb2" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.DddCleanArchitecture/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.DddCleanArchitecture/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DddCleanArchitecture/Extensions/ServiceCollectionExtensions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/DddCleanArchitecture/Extensions/ServiceCollectionExtensions.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DddCleanArchitecture/MainWindow.xaml" beforeDir="false" afterPath="$PROJECT_DIR$/src/DddCleanArchitecture/MainWindow.xaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/DddCleanArchitecture/ViewModels/HomeViewModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/DddCleanArchitecture/ViewModels/HomeViewModel.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DddCleanArchitecture/ViewModels/MainWindowViewModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/DddCleanArchitecture/ViewModels/MainWindowViewModel.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DddCleanArchitecture/Views/HomeView.xaml" beforeDir="false" afterPath="$PROJECT_DIR$/src/DddCleanArchitecture/Views/HomeView.xaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -285,7 +280,15 @@
       <option name="project" value="LOCAL" />
       <updated>1763630676437</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="feat(navigation): possibility to switch between article details and home">
+      <option name="closed" value="true" />
+      <created>1763631353583</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1763631353583</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -312,7 +315,8 @@
     <MESSAGE value="fix(navigation repo): being more specific for the type of the views" />
     <MESSAGE value="fix(navigation): making navigation accessible inside navigable views" />
     <MESSAGE value="fix(navigable repository): adding nullability check for the registered views" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix(navigable repository): adding nullability check for the registered views" />
+    <MESSAGE value="feat(navigation): possibility to switch between article details and home" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat(navigation): possibility to switch between article details and home" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
