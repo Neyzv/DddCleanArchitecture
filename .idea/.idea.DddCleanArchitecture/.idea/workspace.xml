@@ -9,7 +9,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4e03f68c-d391-4fe8-9ac3-1f70f6d17eb2" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.DddCleanArchitecture/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.DddCleanArchitecture/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/DddCleanArchitecture.Domain/Models/Articles/Article.cs" beforeDir="false" afterPath="$PROJECT_DIR$/lib/DddCleanArchitecture.Domain/Models/Articles/Article.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/DddCleanArchitecture.Domain/Models/Articles/Comment.cs" beforeDir="false" afterPath="$PROJECT_DIR$/lib/DddCleanArchitecture.Domain/Models/Articles/Comment.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/DddCleanArchitecture.Infrastructure/Extensions/DbEntityExtensions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/lib/DddCleanArchitecture.Infrastructure/Extensions/DbEntityExtensions.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DddCleanArchitecture/Assets/Resources/FontSize.xaml" beforeDir="false" afterPath="$PROJECT_DIR$/src/DddCleanArchitecture/Assets/Resources/FontSize.xaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DddCleanArchitecture/MainWindow.xaml" beforeDir="false" afterPath="$PROJECT_DIR$/src/DddCleanArchitecture/MainWindow.xaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DddCleanArchitecture/Models/Articles/ArticlePresenter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/DddCleanArchitecture/Models/Articles/ArticlePresenter.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DddCleanArchitecture/Services/Navigation/INavigationService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/DddCleanArchitecture/Services/Navigation/INavigationService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DddCleanArchitecture/Services/Navigation/NavigationService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/DddCleanArchitecture/Services/Navigation/NavigationService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DddCleanArchitecture/ViewModels/ArticleViewModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/DddCleanArchitecture/ViewModels/ArticleViewModel.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/DddCleanArchitecture/ViewModels/HomeViewModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/DddCleanArchitecture/ViewModels/HomeViewModel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DddCleanArchitecture/Views/ArticleView.xaml" beforeDir="false" afterPath="$PROJECT_DIR$/src/DddCleanArchitecture/Views/ArticleView.xaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -288,7 +299,15 @@
       <option name="project" value="LOCAL" />
       <updated>1763631353583</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="feat(home): optimizing memory allocation">
+      <option name="closed" value="true" />
+      <created>1763631884898</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1763631884898</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -316,7 +335,8 @@
     <MESSAGE value="fix(navigation): making navigation accessible inside navigable views" />
     <MESSAGE value="fix(navigable repository): adding nullability check for the registered views" />
     <MESSAGE value="feat(navigation): possibility to switch between article details and home" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat(navigation): possibility to switch between article details and home" />
+    <MESSAGE value="feat(home): optimizing memory allocation" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat(home): optimizing memory allocation" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

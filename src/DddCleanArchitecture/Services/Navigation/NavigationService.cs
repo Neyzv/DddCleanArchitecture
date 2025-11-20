@@ -17,7 +17,7 @@ public sealed class NavigationService
         _navigationRepository = navigationRepository;
     }
 
-    public async Task NavigateToAsync<TView>()
+    public async Task<TView> NavigateToAsync<TView>()
         where TView : Control
     {
         if (_navigationRepository.TryGetView<TView>() is not { } view)
@@ -34,5 +34,7 @@ public sealed class NavigationService
         ViewChanged?.Invoke(view);
 
         await viewModel.OnNavigateToAsync().ConfigureAwait(false);
+
+        return view;
     }
 }

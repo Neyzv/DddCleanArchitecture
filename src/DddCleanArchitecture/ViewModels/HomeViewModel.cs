@@ -54,7 +54,7 @@ public sealed partial class HomeViewModel
         Articles.Clear();
 
         foreach (var article in await _articleRepository.GetAllArticlesOrderedDescByDate())
-            Articles.Add(new ArticlePresenter(article));
+            Articles.Add(new ArticlePresenter(article.Id, article.Title, article.PublishDate, article.Comments.Count));
     }
 
     public override Task OnNavigatedFromAsync()
@@ -67,6 +67,12 @@ public sealed partial class HomeViewModel
     [RelayCommand]
     private async Task NavigateToArticleAsync(ArticlePresenter article)
     {
-        await _navigationService.NavigateToAsync<ArticleView>();
+        var view = await _navigationService.NavigateToAsync<ArticleView>();
+
+        if (view.DataContext is not ArticleViewModel viewModel
+            || await _articleRepository.GetArticleByIdWithComments(article.Id) is not { } a)
+            return;
+
+        viewModel.Article = a;
     }
 }

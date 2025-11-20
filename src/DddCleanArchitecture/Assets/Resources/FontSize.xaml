@@ -6,4 +6,6 @@
     <sys:Double x:Key="TextSm">14</sys:Double>
     <sys:Double x:Key="TextBase">16</sys:Double>
     <sys:Double x:Key="TextLg">18</sys:Double>
+    <sys:Double x:Key="TextXl">20</sys:Double>
+    <sys:Double x:Key="Text2Xl">22</sys:Double>
 </ResourceDictionary>
