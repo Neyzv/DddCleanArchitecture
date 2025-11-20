@@ -20,6 +20,7 @@ public sealed partial class NavigationRepositorySourceGenerator
             .AppendLine("#nullable enable")
             .AppendLine()
             .AppendLine("using System.Windows.Controls;")
+            .AppendLine("using System.Diagnostics.CodeAnalysis;")
             .AppendLine("using Microsoft.Extensions.DependencyInjection;")
             .AppendLine()
             .AppendLine("namespace DddCleanArchitecture;")
@@ -53,6 +54,7 @@ public sealed partial class NavigationRepositorySourceGenerator
                 .AppendLine("/// <summary>")
                 .AppendLine("/// Initializes this repository, this is needed before any usage.")
                 .AppendLine("/// </summary>")
+                .AppendLine("[MemberNotNull(nameof(_registeredView))]")
                 .AppendLine("private void Initialize()");
             using (writer.CreateScope())
             {
@@ -108,7 +110,8 @@ public sealed partial class NavigationRepositorySourceGenerator
             using (writer.CreateScope())
             {
                 writer.AppendLine("if (_registeredView is null)")
-                    .AppendIndentedLine("Initialize();");
+                    .AppendIndentedLine("Initialize();")
+                    .AppendLine();
 
                 writer.AppendLine("return (TView?)(_registeredView.TryGetValue(typeof(TView), out var view) ? view : default);");
             }
