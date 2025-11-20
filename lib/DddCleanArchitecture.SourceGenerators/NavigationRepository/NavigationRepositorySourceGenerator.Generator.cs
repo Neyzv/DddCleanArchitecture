@@ -30,7 +30,7 @@ public sealed partial class NavigationRepositorySourceGenerator
         {
             // Static fields
             writer
-                .AppendLine("private readonly Dictionary<Type, object> _registeredView;")
+                .AppendLine("private readonly Dictionary<Type, Control> _registeredView;")
                 .AppendLine();
 
             // Constructors
@@ -38,7 +38,7 @@ public sealed partial class NavigationRepositorySourceGenerator
             using (writer.CreateScope())
             {
                 writer
-                    .AppendLine("_registeredView = new Dictionary<Type, object>()")
+                    .AppendLine("_registeredView = new Dictionary<Type, Control>()")
                     .AppendLine('{');
 
                 writer.IndentationLevel++;
