@@ -23,7 +23,7 @@ public sealed partial class ArticleViewModel
         if (value is null)
             return;
 
-        foreach (var comment in value.Comments)
+        foreach (var comment in value.Comments.OrderByDescending(static x => x.CreatedOn))
             Comments.Add(new CommentPresenter(comment.Content, comment.CreatedOn));
     }
 }
