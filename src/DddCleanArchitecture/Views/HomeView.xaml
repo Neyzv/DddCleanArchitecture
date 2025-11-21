@@ -38,7 +38,7 @@
                     <Grid MaxHeight="400" MinHeight="300">
                         <Border
                             Background="White"
-                            CornerRadius="8"
+                            CornerRadius="{StaticResource Rounded}"
                             Effect="{StaticResource ContainerShadowXs}"
                             HorizontalAlignment="Stretch"
                             VerticalAlignment="Stretch" />

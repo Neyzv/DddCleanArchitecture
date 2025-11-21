@@ -53,7 +53,7 @@
                 Orientation="Horizontal">
                 <Button Command="{Binding ChangeLanguageToFrenchCommand, Mode=OneTime}">
                     <Border
-                        CornerRadius="4"
+                        CornerRadius="{StaticResource RoundedSm}"
                         Height="{Binding Source={StaticResource TextBase}, Mode=OneTime, Converter={StaticResource MultiplyByHalfConverter}}"
                         Width="{Binding Source={StaticResource TextBase}, Mode=OneTime, Converter={StaticResource MultiplyByTwoConverter}}">
                         <Border.Background>
@@ -68,7 +68,7 @@
 
                 <Button Command="{Binding ChangeLanguageToEnglishCommand, Mode=OneTime}" Margin="5,0,0,0">
                     <Border
-                        CornerRadius="4"
+                        CornerRadius="{StaticResource RoundedSm}"
                         Height="{Binding Source={StaticResource TextBase}, Mode=OneTime, Converter={StaticResource MultiplyByHalfConverter}}"
                         Width="{Binding Source={StaticResource TextBase}, Mode=OneTime, Converter={StaticResource MultiplyByTwoConverter}}">
                         <Border.Background>

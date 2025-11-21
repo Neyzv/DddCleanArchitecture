@@ -14,12 +14,21 @@
     </d:UserControl.DataContext>
 
     <Grid MaxWidth="800" VerticalAlignment="Top">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
         <Border
             Background="White"
-            CornerRadius="8"
-            Effect="{StaticResource ContainerShadowXs}" />
+            CornerRadius="{StaticResource Rounded}"
+            Effect="{StaticResource ContainerShadowXs}"
+            Grid.Row="0" />
 
-        <StackPanel Margin="20,15" Orientation="Vertical">
+        <StackPanel
+            Grid.Row="0"
+            Margin="20,15"
+            Orientation="Vertical">
             <TextBlock FontSize="{StaticResource Text2Xl}" Text="{Binding Article.Title, Mode=OneWay, FallbackValue=''}" />
 
             <Border
@@ -30,5 +39,64 @@
 
             <TextBlock Text="{Binding Article.Content, Mode=OneWay, FallbackValue=''}" TextWrapping="Wrap" />
         </StackPanel>
+
+        <ItemsControl
+            Grid.Row="1"
+            ItemsSource="{Binding Comments, Mode=OneWay}"
+            Margin="0,30,0,0">
+            <ItemsControl.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <StackPanel Orientation="Vertical" />
+                </ItemsPanelTemplate>
+            </ItemsControl.ItemsPanel>
+
+            <ItemsControl.ItemTemplate>
+                <DataTemplate>
+                    <Grid
+                        Margin="0,0,0,20"
+                        MaxWidth="800"
+                        VerticalAlignment="Top">
+                        <Border
+                            Background="White"
+                            CornerRadius="{StaticResource Rounded}"
+                            Effect="{StaticResource ContainerShadowXs}" />
+
+                        <Grid Margin="20,15">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+
+                            <Ellipse
+                                Fill="{Binding IllusColor, Mode=OneTime}"
+                                Grid.Column="0"
+                                Height="60"
+                                HorizontalAlignment="Center"
+                                VerticalAlignment="Center"
+                                Width="60" />
+
+                            <StackPanel
+                                Grid.Column="1"
+                                Margin="10,0,0,0"
+                                Orientation="Vertical">
+                                <TextBlock
+                                    FontSize="{StaticResource TextXs}"
+                                    Opacity="0.8"
+                                    Text="{Binding CreatedOn, Mode=OneTime}" />
+
+                                <Border
+                                    Background="Black"
+                                    Height="0.5"
+                                    HorizontalAlignment="Stretch"
+                                    Margin="0,5"
+                                    Opacity="0.5" />
+
+                                <TextBlock Text="{Binding Content, Mode=OneTime}" TextWrapping="Wrap" />
+                            </StackPanel>
+                        </Grid>
+                    </Grid>
+                </DataTemplate>
+            </ItemsControl.ItemTemplate>
+        </ItemsControl>
     </Grid>
 </UserControl>
