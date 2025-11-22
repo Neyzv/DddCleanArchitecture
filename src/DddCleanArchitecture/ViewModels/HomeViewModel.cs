@@ -4,7 +4,9 @@ using DddCleanArchitecture.Domain.Attributes;
 using DddCleanArchitecture.Domain.Repositories.Articles;
 using DddCleanArchitecture.Domain.Services.Internationalisation;
 using DddCleanArchitecture.Internationalisation.Resources;
+using DddCleanArchitecture.Models.Animations;
 using DddCleanArchitecture.Models.Articles;
+using DddCleanArchitecture.Repositories.Animations;
 using DddCleanArchitecture.Services.Navigation;
 using DddCleanArchitecture.ViewModels.Navigation;
 using DddCleanArchitecture.Views;
@@ -25,6 +27,12 @@ public sealed partial class HomeViewModel
         Labels.Comments;
 
     public ObservableCollection<ArticlePresenter> Articles { get; } = [];
+
+    public override AnimationInformation? EnterAnimation =>
+        AnimationInformationRepository.FadeIn;
+
+    public override AnimationInformation? ExitAnimation =>
+        AnimationInformationRepository.FadeOut;
 
     public HomeViewModel()
     {

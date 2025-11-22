@@ -2,7 +2,9 @@
 using CommunityToolkit.Mvvm.ComponentModel;
 using DddCleanArchitecture.Domain.Attributes;
 using DddCleanArchitecture.Domain.Models.Articles;
+using DddCleanArchitecture.Models.Animations;
 using DddCleanArchitecture.Models.Articles;
+using DddCleanArchitecture.Repositories.Animations;
 using DddCleanArchitecture.ViewModels.Navigation;
 using DddCleanArchitecture.Views;
 
@@ -15,6 +17,12 @@ public sealed partial class ArticleViewModel
     [ObservableProperty] private Article? _article;
 
     public ObservableCollection<CommentPresenter> Comments { get; } = [];
+
+    public override AnimationInformation? EnterAnimation =>
+        AnimationInformationRepository.FadeIn;
+
+    public override AnimationInformation? ExitAnimation =>
+        AnimationInformationRepository.FadeOut;
 
     partial void OnArticleChanged(Article? value)
     {

@@ -1,6 +1,7 @@
 ﻿using DddCleanArchitecture.Application.Extensions;
 using DddCleanArchitecture.Infrastructure.Extensions;
 using DddCleanArchitecture.Models.Configuration;
+using DddCleanArchitecture.Services.Animations;
 using DddCleanArchitecture.Services.Navigation;
 using DddCleanArchitecture.ViewModels;
 using Microsoft.EntityFrameworkCore;
@@ -26,6 +27,7 @@ public static class ServiceCollectionExtensions
             .AddApplicationLayer()
             .AddScoped<NavigationRepository>()
             .AddScoped<INavigationService, NavigationService>()
+            .AddSingleton<INavigationAnimationService, NavigationAnimationService>()
             .AddSingleton<MainWindowViewModel>()
             .AddSingleton<MainWindow>();
 

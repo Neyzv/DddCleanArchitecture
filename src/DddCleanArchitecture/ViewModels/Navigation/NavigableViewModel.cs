@@ -1,5 +1,6 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
 using DddCleanArchitecture.Domain.Attributes;
+using DddCleanArchitecture.Models.Animations;
 
 namespace DddCleanArchitecture.ViewModels.Navigation;
 
@@ -11,6 +12,16 @@ namespace DddCleanArchitecture.ViewModels.Navigation;
 public abstract class NavigableViewModel
     : ObservableObject
 {
+    /// <summary>
+    /// The <see cref="AnimationInformation"/> when we enter to this view model.
+    /// </summary>
+    public virtual AnimationInformation? EnterAnimation { get; }
+
+    /// <summary>
+    /// The <see cref="AnimationInformation"/> when we exit this view model.
+    /// </summary>
+    public virtual AnimationInformation? ExitAnimation { get; }
+
     public virtual Task OnNavigatedFromAsync() =>
         Task.CompletedTask;
 

@@ -4,6 +4,7 @@ using CommunityToolkit.Mvvm.Input;
 using DddCleanArchitecture.Domain.Enums;
 using DddCleanArchitecture.Domain.Services.Internationalisation;
 using DddCleanArchitecture.Internationalisation.Resources;
+using DddCleanArchitecture.Services.Animations;
 using DddCleanArchitecture.Services.Navigation;
 using DddCleanArchitecture.Views;
 
@@ -13,6 +14,7 @@ public sealed partial class MainWindowViewModel
     : ObservableObject
 {
     private readonly INavigationService _navigationService;
+    private readonly INavigationAnimationService _navigationAnimationService;
     private readonly IInternationalisationService _internationalisationService;
 
     [ObservableProperty] private Control? _current;
@@ -28,9 +30,12 @@ public sealed partial class MainWindowViewModel
         _internationalisationService = null!;
     }
 
-    public MainWindowViewModel(INavigationService navigationService, IInternationalisationService internationalisationService)
+    public MainWindowViewModel(INavigationService navigationService,
+        INavigationAnimationService navigationAnimationService,
+        IInternationalisationService internationalisationService)
     {
         _navigationService = navigationService;
+        _navigationAnimationService = navigationAnimationService;
         _internationalisationService = internationalisationService;
 
         _navigationService.ViewChanged += OnCurrentViewChanged;
@@ -44,13 +49,11 @@ public sealed partial class MainWindowViewModel
         OnPropertyChanged(nameof(HomeLabel));
     }
 
-    private void OnCurrentViewChanged(Control newView)
-    {
-        Current = newView;
-    }
+    private void OnCurrentViewChanged(Control newView) =>
+        _navigationAnimationService.SwitchViewAsync(Current, newView, c => Current = c);
 
     [RelayCommand]
-    private Task NavigateToHomeAsync() =>
+    private Task<HomeView> NavigateToHomeAsync() =>
         _navigationService.NavigateToAsync<HomeView>();
 
     [RelayCommand]
