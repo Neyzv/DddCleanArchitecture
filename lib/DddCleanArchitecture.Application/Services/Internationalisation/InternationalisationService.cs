@@ -8,6 +8,9 @@ namespace DddCleanArchitecture.Application.Services.Internationalisation;
 public sealed class InternationalisationService
     : IInternationalisationService
 {
+    /// <summary>
+    /// An association of <see cref="Language"/> to its <see cref="string"/> equivalent.
+    /// </summary>
     private static readonly ReadOnlyDictionary<Language, string> LanguageDictionary = new Dictionary<Language, string>
     {
         [Language.English] = "en-US",
@@ -18,6 +21,7 @@ public sealed class InternationalisationService
 
     public event Action? LanguageChanged;
 
+    /// <inheritdoc/>
     public bool TryChangeLanguage(Language language)
     {
         if (!LanguageDictionary.TryGetValue(language, out var culture))

@@ -11,6 +11,12 @@ namespace DddCleanArchitecture.Infrastructure.Extensions;
 
 public static class ServiceCollectionExtensions
 {
+    /// <summary>
+    /// Add the infrastructure layer to the <see cref="IServiceCollection"/>.
+    /// </summary>
+    /// <param name="services">The application <see cref="IServiceCollection"/>.</param>
+    /// <param name="configure">An action to configure the database usage.</param>
+    /// <returns></returns>
     public static IServiceCollection AddMyDbContext(this IServiceCollection services, Action<IServiceProvider, DbContextOptionsBuilder>? configure = null) =>
         services.AddDbContextFactory<MyDbContext>((sp, o) => configure?.Invoke(sp, o))
             .AddSingleton<ISeeder, ArticleSeeder>()

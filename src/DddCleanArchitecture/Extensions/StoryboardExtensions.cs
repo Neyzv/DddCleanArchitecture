@@ -5,6 +5,12 @@ namespace DddCleanArchitecture.Extensions;
 
 public static class StoryboardExtensions
 {
+    /// <summary>
+    /// Execute a <see cref="Storyboard"/> asynchronously.
+    /// </summary>
+    /// <param name="storyboard">The storyboard that needs to be executed.</param>
+    /// <param name="target">The element to execute on.</param>
+    /// <returns></returns>
     public static Task BeginAsync(this Storyboard storyboard, FrameworkElement target)
     {
         var tcs = new TaskCompletionSource();

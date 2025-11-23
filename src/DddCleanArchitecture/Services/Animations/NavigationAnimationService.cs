@@ -8,6 +8,7 @@ namespace DddCleanArchitecture.Services.Animations;
 public sealed class NavigationAnimationService
     : INavigationAnimationService
 {
+    /// <inheritdoc/>
     public async Task SwitchViewAsync(Control? previousView, Control nextView, Action<Control> propertySetterCallback)
     {
         if (previousView?.DataContext is NavigableViewModel { ExitAnimation: not null } previousNavigableViewModel)

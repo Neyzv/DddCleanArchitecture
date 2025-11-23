@@ -7,9 +7,14 @@ namespace DddCleanArchitecture.Infrastructure.Database.Seeding;
 public sealed class ArticleSeeder
     : ISeeder
 {
+    /// <inheritdoc />
     public bool ShouldBeApplied(DbContext context) =>
         !context.Set<ArticleEntity>().Any();
 
+    /// <summary>
+    /// Generate random articles with their comments.
+    /// </summary>
+    /// <returns>The newly created articles.</returns>
     private static List<ArticleEntity> GenerateArticles()
     {
         var commentFaker = new Faker<CommentEntity>()
@@ -35,15 +40,18 @@ public sealed class ArticleSeeder
         return faker.Generate(Random.Shared.Next(3, 6));
     }
 
+    /// <inheritdoc />
     public void Seed(DbContext context)
     {
         context.Set<ArticleEntity>().AddRange(GenerateArticles());
         context.SaveChanges();
     }
 
+    /// <inheritdoc />
     public async Task<bool> ShouldBeAppliedAsync(DbContext context, CancellationToken token) =>
         !await context.Set<ArticleEntity>().AnyAsync(token).ConfigureAwait(false);
 
+    /// <inheritdoc />
     public async Task SeedAsync(DbContext context, CancellationToken token)
     {
         await context

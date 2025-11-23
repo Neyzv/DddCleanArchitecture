@@ -10,6 +10,7 @@ public sealed class NavigationService
 
     private NavigableViewModel? _currentViewModel;
 
+    /// <inheritdoc/>
     public event ViewChangedEventHandler? ViewChanged;
 
     public NavigationService(NavigationRepository navigationRepository)
@@ -17,6 +18,7 @@ public sealed class NavigationService
         _navigationRepository = navigationRepository;
     }
 
+    /// <inheritdoc/>
     public async Task<TView> NavigateToAsync<TView>()
         where TView : Control
     {

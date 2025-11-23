@@ -16,6 +16,11 @@ public static class ServiceCollectionExtensions
     private const string AppSettingsFile = "appsettings.json";
     private const string AppSettingsDebugFile = "appsettings.Debug.json";
 
+    /// <summary>
+    /// Add the app services.
+    /// </summary>
+    /// <param name="services">The application <see cref="IServiceCollection"/>.</param>
+    /// <returns></returns>
     private static IServiceCollection AddServices(this IServiceCollection services) =>
         services
             .AddMyDbContext((sp, o) =>
@@ -31,6 +36,11 @@ public static class ServiceCollectionExtensions
             .AddSingleton<MainWindowViewModel>()
             .AddSingleton<MainWindow>();
 
+    /// <summary>
+    /// Add configuration.
+    /// </summary>
+    /// <param name="services">The application <see cref="IServiceCollection"/>.</param>
+    /// <returns></returns>
     private static IServiceCollection AddConfiguration(this IServiceCollection services)
     {
         var config = new ConfigurationBuilder()
@@ -46,6 +56,11 @@ public static class ServiceCollectionExtensions
             .Configure<DatabaseConfiguration>(config.GetSection(nameof(DatabaseConfiguration)));
     }
 
+    /// <summary>
+    /// Add services and configuration for the application.
+    /// </summary>
+    /// <param name="services">The application <see cref="IServiceCollection"/>.</param>
+    /// <returns></returns>
     public static IServiceCollection AddServicesAndConfiguration(this IServiceCollection services) =>
         services
             .AddConfiguration()

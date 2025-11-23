@@ -5,6 +5,14 @@ namespace DddCleanArchitecture.Infrastructure.Database.Repositories.Specificatio
 
 internal static class SpecificationEvaluator
 {
+    /// <summary>
+    /// Extension method to compute the appropriate query based on the specified <paramref name="specifications"/>.
+    /// </summary>
+    /// <param name="baseQuery">The base query.</param>
+    /// <param name="specifications">A collection of <see cref="ISpecification{TDbEntity}"/> that needs to be applied.</param>
+    /// <typeparam name="TDbEntity">The type of the <see cref="IDbEntity"/>.</typeparam>
+    /// <returns>The computed query.</returns>
+    /// <exception cref="InvalidOperationException"></exception>
     internal static IQueryable<TDbEntity> GetQuery<TDbEntity>(this IQueryable<TDbEntity> baseQuery,
         params IEnumerable<ISpecification<TDbEntity>> specifications)
         where TDbEntity : class, IDbEntity

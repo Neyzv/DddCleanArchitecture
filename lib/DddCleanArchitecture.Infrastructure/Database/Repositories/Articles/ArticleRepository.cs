@@ -13,11 +13,13 @@ namespace DddCleanArchitecture.Infrastructure.Database.Repositories.Articles;
 public sealed class ArticleRepository(IDbContextFactory<MyDbContext> dbContextFactory, IServiceProvider serviceProvider)
     : EntityRepository<ArticleEntity>(dbContextFactory), IArticleRepository
 {
+    /// <inheritdoc/>
     public async Task<IEnumerable<Article>> GetAllArticlesOrderedDescByDate() =>
         (await GetAllAsync(serviceProvider.GetRequiredService<ByDateOrderedDescSpecification>(),
             serviceProvider.GetRequiredService<CommentsIncludeSpecification>()).ConfigureAwait(false))
         .Select(static Article (x) => x.MapToArticle());
 
+    /// <inheritdoc/>
     public async Task<Article?> GetArticleByIdWithComments(int id) =>
         (await GetAsync(
             new GetByIdCriteriaSpecification(id),

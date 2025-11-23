@@ -15,16 +15,24 @@ public abstract class NavigableViewModel
     /// <summary>
     /// The <see cref="AnimationInformation"/> when we enter to this view model.
     /// </summary>
-    public virtual AnimationInformation? EnterAnimation { get; }
+    public virtual AnimationInformation? EnterAnimation { get; } = null;
 
     /// <summary>
     /// The <see cref="AnimationInformation"/> when we exit this view model.
     /// </summary>
-    public virtual AnimationInformation? ExitAnimation { get; }
+    public virtual AnimationInformation? ExitAnimation { get; } = null;
 
+    /// <summary>
+    /// Executed before leaving the view associated with this view model.
+    /// </summary>
+    /// <returns></returns>
     public virtual Task OnNavigatedFromAsync() =>
         Task.CompletedTask;
 
+    /// <summary>
+    /// Executed when entering to the view associated with this view model.
+    /// </summary>
+    /// <returns></returns>
     public virtual Task OnNavigateToAsync() =>
         Task.CompletedTask;
 }

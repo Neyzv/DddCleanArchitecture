@@ -3,6 +3,9 @@ using System.Windows.Data;
 
 namespace DddCleanArchitecture.Converters;
 
+/// <summary>
+/// Converter to multiply a <see cref="double"/> by a factor.
+/// </summary>
 public sealed class MultiplyConverter : IValueConverter
 {
     public double Factor { get; set; } = 1.0;
